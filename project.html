@@ -8,23 +8,24 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.cdnfonts.com/css/helvetica-neue-55" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@100..900&display=swap" rel="stylesheet">
-
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="style/style.css">
 </head>
 
-<body style="background: rgb(246,249,252); font-family: 'Noto Sans Thai', 'Helvetica Neue', sans-serif;">
+<body>
+
     <!-- Header -->
-    <div class="container-fluid px-3 align-content-center"
-        style="background-color: black; height: 40px; color: white; font-size: 12px;">
+    <div class="container-fluid px-3 align-content-center fs-sm"
+        style="background-color: black; height: 40px; color: white;">
         <div class="row">
             <!-- อย่าลืมเปลี่ยนเป็นรูปโลโก้ -->
             <div class="col-6">LOGO</div>
             <!-- ปุ่มกดร้านค้าใกล้คุณ อย่าลืมใส่ลิ้งค์ -->
-            <a href="#" class="col-3" style="color: white; text-decoration: none;">ร้านค้าใกล้คุณ</a>
+            <a href="#" class="col-3" style="color: white;">ร้านค้าใกล้คุณ</a>
             <!-- Dropdown เลือกภาษา อย่าลืมเปลี่ยนเป็นรูปธง กับฟังก์ชั่นเปลี่ยนรูปธงกับตรงคำว่า"ไทย"เป็น "ENG" -->
             <div class="col-3 dropdown-center dropdown row" data-bs-toggle="dropdown">
                 <div class="col-6">FLAG</div>
-                <span class="dropdown-toggle col-6" aria-expanded="false" style="font-weight: bold;">ไทย</span>
+                <span class="dropdown-toggle col-6 fw-bold" aria-expanded="false">ไทย</span>
                 <ul class="dropdown-menu">
                     <li><a class="dropdown-item" href="#">ไทย</a></li>
                     <li><a class="dropdown-item" href="#">ENG</a></li>
@@ -32,64 +33,635 @@
             </div>
         </div>
     </div>
+
     <!-- Sticky Header/Search bar-->
-    <div class="container sticky-top align-content-center" style="background-color: white; height: 64px;">
-        <div>ค้นหาสินค้า</div>
+    <div class="container sticky-top align-content-center" style="background-color: white; height: 64px; z-index: 100;">
+        <input class="rounded-pill search" type="text" placeholder="ค้นหาสินค้า">
     </div>
+
     <!-- Content -->
     <div class="container">
+
         <!-- Floating chat button -->
-        <div class="rounded-circle  align-content-center"
-            style="color:white; background-color: red; position: fixed; bottom: 75px; right: 20px; height: 55px; width: 55px;text-align: center;">
+        <a class="rounded-circle  align-content-center chat-button">
             CHAT
+        </a>
+
+        <!-- Bootstrap Banner Carousel (id:carouselTop Class:topcarousel) -->
+        <div id="carouselTop" class="carousel slide no-container-sm" data-bs-ride="carousel" data-bs-interval="10000"
+            style="padding: 20px 0px;">
+            <div class="carousel-indicators">
+                <!-- เพิ่ม Indicator ตรงนี้ -->
+                <button type="button" data-bs-target="#carouselTop" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselTop" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselTop" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner topcarousel">
+                <!-- เพิ่มรูปกับใส่ลิ้งค์ตรงนี้ -->
+                <!-- Carousel Slide 1 -->
+                <a class="carousel-item active" href="#">
+                    <img src="https://via.placeholder.com/1200x400/ff7f7f/333333?text=Product+1" class="d-block w-100">
+                </a>
+                <!-- Carousel Slide 2 -->
+                <a class="carousel-item" href="#">
+                    <img src="https://via.placeholder.com/1200x400/7f7fff/333333?text=Product+2" class="d-block w-100">
+                </a>
+                <!-- Carousel Slide 3 -->
+                <a class="carousel-item" href="#">
+                    <img src="https://via.placeholder.com/1200x400/7fff7f/333333?text=Product+3" class="d-block w-100">
+                </a>
+            </div>
         </div>
-        <div>Content</div>
-        <div style="padding-bottom: 120px;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab fuga possimus nesciunt modi temporibus dolorem
-            maxime aliquid illo eos, ea facere fugiat, laboriosam velit necessitatibus. Libero minus et est commodi quos
-            dolorum eligendi nihil, nam quod! In eaque consequuntur vitae earum consectetur facere dolorem repellat
-            deleniti eligendi quaerat accusantium, aut dicta quia minima, placeat quo modi perspiciatis quibusdam totam
-            corporis a debitis assumenda. Facilis adipisci eius sapiente omnis mollitia ratione nulla natus similique
-            enim totam! Deserunt debitis odit alias nisi laboriosam rem maxime saepe iste architecto? Quibusdam itaque
-            ab libero, repudiandae inventore ipsum porro error accusantium labore aperiam recusandae neque, at a.
-            Officiis saepe animi ut ex at est fuga molestiae quam temporibus porro. Dolores neque quidem assumenda
-            placeat magnam iure impedit eveniet, dolor hic quisquam magni, architecto eligendi vel. Quasi nam quis
-            labore, quas quam dolore numquam debitis necessitatibus incidunt maiores deserunt saepe itaque nulla.
-            Doloremque inventore iste earum. Facilis doloremque similique deleniti magnam id veritatis provident? Nihil
-            fugit consequuntur deleniti molestiae facilis error mollitia iure eius est tempora, tempore, voluptate
-            aliquid laborum eos omnis repellendus provident culpa. Unde odit voluptatum harum ut veritatis esse ratione,
-            nostrum perspiciatis sunt ex consequatur adipisci. Nesciunt ipsum sunt corporis fugit sit necessitatibus
-            deserunt et est enim, animi voluptatem eveniet alias voluptate consequuntur architecto exercitationem
-            perspiciatis quas quod molestias ducimus doloribus, sed tempore minus. Mollitia tempora accusantium odit
-            unde in esse, consequatur quisquam blanditiis aperiam soluta ipsa rerum ducimus, reprehenderit eligendi
-            nobis veritatis voluptatibus facere modi necessitatibus est. Aut quidem illo nihil rem dolorem delectus
-            similique dolorum officiis? Itaque saepe enim officiis cumque blanditiis officia doloremque asperiores
-            ratione voluptate voluptates! Repudiandae ullam, molestias, ut magni beatae blanditiis nobis id quidem
-            provident tempore vitae iusto excepturi voluptas facilis sed placeat perferendis odit dignissimos quibusdam
-            sapiente aperiam tempora neque pariatur corrupti? Nam modi asperiores ab laborum corporis necessitatibus,
-            eum eaque aut, soluta cum maxime qui fuga praesentium nihil eos ratione! Nulla qui fuga voluptate facere cum
-            distinctio cupiditate consequatur eum, harum corrupti modi? Blanditiis nostrum reprehenderit est rerum,
-            voluptatem, corrupti accusamus doloremque atque quia officia ut quasi voluptate reiciendis, dignissimos
-            saepe in tempora sit quos modi libero explicabo alias pariatur tempore. Suscipit illo, commodi, sit dicta
-            repellat saepe fuga alias atque quis aperiam, enim rerum. Labore eius sequi, at minima nostrum reiciendis
-            quo ducimus dolore fugit, velit neque odio dolor consectetur placeat perferendis. Veritatis placeat numquam
-            repellat cupiditate laboriosam reprehenderit pariatur aliquam quia quod veniam hic fugiat vitae aspernatur
-            voluptatem aut, facilis officiis corporis repudiandae asperiores ullam necessitatibus porro consectetur
-            cumque. Expedita labore maxime ullam error at autem odio amet voluptatibus, aspernatur vitae quibusdam
-            doloremque. Ipsum facilis sed cum vero atque eum asperiores ab expedita, molestias id sequi tempora commodi
-            eius totam neque minus quidem a porro mollitia nobis provident harum doloribus dolorum ipsam? Quam, sint
-            voluptates possimus saepe in fugiat exercitationem reprehenderit hic illo recusandae delectus harum maiores
-            minima qui ducimus consequuntur mollitia doloremque nobis! Omnis impedit aperiam officiis! Velit accusantium
-            incidunt earum magni assumenda cupiditate eum pariatur, dignissimos corporis labore id magnam. Assumenda.
+
+        <!-- Custom Promotion Carousel (SlickJS)-->
+        <div class="promotion-carousel slider bottom-gap-lg">
+            <!-- เพิ่มรูปกับใส่ลิ้งค์ตรงนี้ -->
+            <!-- Carousel Slide 1 -->
+            <a class="slide promotion" href="#">
+                <img src="https://via.placeholder.com/385x200/ff7f7f/333333?text=Product+1"
+                    class="d-block w-100 rounded-corner">
+            </a>
+            <!-- Carousel Slide 2 -->
+            <a class="slide promotion" href="#">
+                <img src="https://via.placeholder.com/385x200/7f7fff/333333?text=Product+2"
+                    class="d-block w-100 rounded-corner">
+            </a>
+            <!-- Carousel Slide 3 -->
+            <a class="slide promotion" href="#">
+                <img src="https://via.placeholder.com/385x200/7fff7f/333333?text=Product+3"
+                    class="d-block w-100 rounded-corner">
+            </a>
+            <!-- Carousel Slide 4 -->
+            <a class="slide promotion" href="#">
+                <img src="https://via.placeholder.com/385x200/7fff7f/333333?text=Product+4"
+                    class="d-block w-100 rounded-corner">
+            </a>
+            <!-- Carousel Slide 5 -->
+            <a class="slide promotion" href="#">
+                <img src="https://via.placeholder.com/385x200/7fff7f/333333?text=Product+5"
+                    class="d-block w-100 rounded-corner">
+            </a>
         </div>
+
+        <!-- Custom Brand Carousel (SlickJS)-->
+        <!-- https://codepen.io/mdashikar/pen/VWPvgE -->
+        <section class="customer-logos slider">
+            <a class="slide" href="#"><img src="https://via.placeholder.com/220x72/7fff7f/333333?text=logo+1"></a>
+            <a class="slide" href="#"><img src="https://via.placeholder.com/220x72/7fff7f/333333?text=logo+2"></a>
+            <a class="slide" href="#"><img src="https://via.placeholder.com/220x72/7fff7f/333333?text=logo+3"></a>
+            <a class="slide" href="#"><img src="https://via.placeholder.com/220x72/7fff7f/333333?text=logo+4"></a>
+            <a class="slide" href="#"><img src="https://via.placeholder.com/220x72/7fff7f/333333?text=logo+5">
+            </a>
+            <a class="slide"><img src="https://via.placeholder.com/220x72/7fff7f/333333?text=logo+6">
+            </a>
+            <a class="slide"><img src="https://via.placeholder.com/220x72/7fff7f/333333?text=logo+7"></a>
+        </section>
+
+        <!-- หมวดหมู่สินค้า -->
+        <div class="category-container">
+            <div class="row fs-md fw-bold bottom-gap-md">
+                <div class="col-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" id="glyph" height="24" viewBox="0 0 64 64" width="24"
+                        class="injected-svg" data-src="/assets/images/icons/categories.svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <path
+                            d="m29 11v14a4 4 0 0 1 -4 4h-14a4 4 0 0 1 -4-4v-14a4 4 0 0 1 4-4h14a4 4 0 0 1 4 4zm24-4h-14a4 4 0 0 0 -4 4v14a4 4 0 0 0 4 4h14a4 4 0 0 0 4-4v-14a4 4 0 0 0 -4-4zm-28 28h-14a4 4 0 0 0 -4 4v14a4 4 0 0 0 4 4h14a4 4 0 0 0 4-4v-14a4 4 0 0 0 -4-4zm21 0a11 11 0 1 0 11 11 11 11 0 0 0 -11-11z"
+                            fill="#E94560"></path>
+                    </svg>
+                </div>
+                <h4 class="col-11 fs-md fw-bold">หมวดหมู่สินค้า</h4>
+            </div>
+
+            <!-- category box -->
+            <!-- อย่าลืมเพิ่มรูปให้แต่ละหมวดหมู่ -->
+            <div class="row">
+                <a href="#" class="col-6">
+                    <div class="category-box">
+                        ซีพียู</div>
+                </a>
+                <a href="#" class="col-6">
+                    <div class="category-box">
+                        เมนบอร์ด</div>
+                </a>
+                <a href="#" class="col-6">
+                    <div class="category-box">
+                        การ์ดจอ</div>
+                </a>
+                <a href="#" class="col-6">
+                    <div class="category-box">
+                        แรม</div>
+                </a>
+                <a href="#" class="col-6">
+                    <div class="category-box">
+                        ฮาร์ดไดร์ฟ</div>
+                </a>
+                <a href="#" class="col-6">
+                    <div class="category-box">
+                        พาวเวอร์ซัพพลาย</div>
+                </a>
+                <a href="#" class="col-6">
+                    <div class="category-box">
+                        ชุดระบายความร้อน</div>
+                </a>
+                <a href="#" class="col-6">
+                    <div class="category-box">
+                        โน๊ตบุ๊ค</div>
+                </a>
+                <a href="#" class="col-6">
+                    <div class="category-box">
+                        เมาส์</div>
+                </a>
+                <a href="#" class="col-6">
+                    <div class="category-box">
+                        คีย์บอร์ด</div>
+                </a>
+                <a href="#" class="col-6">
+                    <div class="category-box">
+                        จอมอนิเตอร์</div>
+                </a>
+                <a href="#" class="col-6">
+                    <div class="category-box">
+                        อุปกรณ์เสริม</div>
+                </a>
+                <a href="#" class="col-6">
+                    <div class="category-box">
+                        เคส</div>
+                </a>
+            </div>
+        </div>
+
+        <!-- สินค้ามาใหม่ -->
+        <div class="bottom-gap-lg">
+            <div class="row bottom-gap-md fs-md fw-bold">
+                <div class="col-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        class="injected-svg" data-src="/assets/images/icons/new-product-1.svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <g clip-path="url(#clip0-170)">
+                            <path
+                                d="M22.9347 12.001L24 10.1003L22.3995 8.62199L22.8254 6.48519L20.8463 5.57376L20.5911 3.40991L18.4273 3.15468L17.5158 1.17562L15.379 1.60157L13.9006 0.000976562L12 1.0663L10.0994 0.000976562L8.62106 1.60152L6.48427 1.17557L5.57283 3.15463L3.40898 3.40987L3.15375 5.57371L1.17469 6.48515L1.60064 8.62194L0 10.1003L1.06533 12.0009L0 13.9016L1.60055 15.3799L1.17459 17.5167L3.15366 18.4281L3.40889 20.592L5.57273 20.8472L6.48417 22.8263L8.62097 22.4003L10.0993 24.0009L11.9999 22.9356L13.9005 24.0009L15.3788 22.4003L17.5156 22.8263L18.4271 20.8472L20.5909 20.592L20.8462 18.4281L22.8252 17.5167L22.3993 15.3799L23.9998 13.9016L22.9347 12.001ZM8.62936 14.0641H7.61878L5.78016 11.7887V14.0641H4.50881V9.43504H5.49984L7.35802 11.7887V9.43504H8.62936V14.0641ZM12.7238 14.0641H9.42483V9.43504H12.6652V10.5434H10.6962V11.1954H12.3783V12.2255H10.6962V12.9557H12.7239V14.0641H12.7238ZM18.0765 14.0641H17.0203L16.3618 12.408L15.7098 14.0641H14.6536L12.8411 9.43504H14.2168L15.2209 12.6102L15.5403 11.6453L14.7905 9.43504H15.9576L16.3618 10.8629L16.7726 9.43504H17.9397L17.1768 11.6453L17.5094 12.6102L18.507 9.43504H19.8891L18.0765 14.0641Z"
+                                fill="#68C944"></path>
+                        </g>
+                        <defs>
+                            <clipPath id="clip0-170">
+                                <rect width="24" height="24" fill="white"></rect>
+                            </clipPath>
+                        </defs>
+                    </svg>
+                </div>
+                <h4 class="col-11 fw-bold fs-md">สินค้ามาใหม่</h4>
+            </div>
+            <div class="newproduct-carousel slider">
+                <!-- เพิ่มรูปกับใส่ลิ้งค์ตรงนี้ -->
+                <!-- Carousel Slide 1 -->
+                <a href="#" class="card slide newproduct">
+                    <div style="padding: 16px;">
+                        <img class="card-img-top rounded-corner"
+                            src="https://via.placeholder.com/400x400/ff7f7f/333333?text=Product+1">
+                    </div>
+                    <div class="card-body">
+                        <h4 class="card-title">Card title</h4>
+                        <div style="height:3rem; margin-bottom:1rem"></div>
+                        <h4 class="price-text" style="margin: 0;">B990</h4>
+                    </div>
+                </a>
+                <!-- Carousel Slide 2 -->
+                <a href="#" class="card slide newproduct">
+                    <div style="padding: 16px;">
+                        <img class="card-img-top rounded-corner"
+                            src="https://via.placeholder.com/400x400/ff7f7f/333333?text=Product+2">
+                    </div>
+                    <div class="card-body">
+                        <h4 class="card-title">Card title</h4>
+                        <div style="height:3rem; margin-bottom:1rem"></div>
+                        <h4 class="price-text" style="margin: 0;">B990</h4>
+                    </div>
+                </a>
+                <!-- Carousel Slide 3 -->
+                <a href="#" class="card slide newproduct">
+                    <div style="padding: 16px;">
+                        <img class="card-img-top rounded-corner"
+                            src="https://via.placeholder.com/400x400/ff7f7f/333333?text=Product+3">
+                    </div>
+                    <div class="card-body">
+                        <h4 class="card-title">Card title</h4>
+                        <div style="height:3rem; margin-bottom:1rem"></div>
+                        <h4 class="price-text" style="margin: 0;">B990</h4>
+                    </div>
+                </a>
+                <!-- Carousel Slide 4 -->
+                <a href="#" class="card slide newproduct">
+                    <div style="padding: 16px;">
+                        <img class="card-img-top rounded-corner"
+                            src="https://via.placeholder.com/400x400/ff7f7f/333333?text=Product+4">
+                    </div>
+                    <div class="card-body">
+                        <h4 class="card-title">Card title</h4>
+                        <div style="height:3rem; margin-bottom:1rem"></div>
+                        <h4 class="price-text" style="margin: 0;">B990</h4>
+                    </div>
+                </a>
+                <!-- Carousel Slide 5 -->
+                <a href="#" class="card slide newproduct">
+                    <div style="padding: 16px;">
+                        <img class="card-img-top rounded-corner"
+                            src="https://via.placeholder.com/400x400/ff7f7f/333333?text=Product+5">
+                    </div>
+                    <div class="card-body">
+                        <h4 class="card-title">Card title</h4>
+                        <div style="height:3rem; margin-bottom:1rem"></div>
+                        <h4 class="price-text" style="margin: 0;">B990</h4>
+                    </div>
+                </a>
+                <!-- Carousel Slide 6 -->
+                <a href="#" class="card slide newproduct">
+                    <div style="padding: 16px;">
+                        <img class="card-img-top rounded-corner"
+                            src="https://via.placeholder.com/400x400/ff7f7f/333333?text=Product+6">
+                    </div>
+                    <div class="card-body">
+                        <h4 class="card-title">Card title</h4>
+                        <div style="height:3rem; margin-bottom:1rem"></div>
+                        <h4 class="price-text" style="margin: 0;">B990</h4>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <!-- Custom Category Carousel (SlickJS)-->
+        <div class="category-carousel slider bottom-gap-lg">
+
+            <!-- เพิ่มรูปใส่ลิ้งค์ -->
+            <a class="slide" href="#">
+                <img class="rounded-corner" src="https://via.placeholder.com/385x200/ff7f7f/333333?text=Category+1"
+                    class="d-block w-100">
+            </a>
+            <a class="slide" href="#">
+                <img class="rounded-corner" src="https://via.placeholder.com/385x200/ff7f7f/333333?text=Category+2"
+                    class="d-block w-100">
+            </a>
+            <a class="slide" href="#">
+                <img class="rounded-corner" src="https://via.placeholder.com/385x200/ff7f7f/333333?text=Category+3"
+                    class="d-block w-100">
+            </a>
+        </div>
+
+        <!-- สินค้า DIY -->
+        <div class="diy-container">
+            <div class="row align-items-center bottom-gap-md">
+                <div class="col-1">
+                    <i class="bi bi-tools fs-lg" style="color: red;"></i><br>
+                </div>
+                <h4 class="col-11 fw-bold fs-md">สินค้า DIY</h4>
+            </div>
+            <!-- ทำให้เป็น Dynamic content (เวลากด Category อื่นเปลี่ยน Text [ซีพียู] เป็น [เมนบอร์ด] เปลี่ยนเนื้อหาที่แสดง ฯลฯ ) -->
+            <div>
+                <div class="category-header-box">
+                    <h4 class="fw-bold fs-md">ซีพียู</h4>
+                    <a href="#">
+                        <span style="color: #7D879C; font-size: 14px;">ดูทั้งหมด</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10" fill="none"
+                            class="injected-svg" data-src="/assets/images/icons/right-arrow.svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <g clip-path="url(#clip0-387)">
+                                <path
+                                    d="M9.73948 4.8117L1.47853 0.0290272C1.41158 -0.00967573 1.32853 -0.00967573 1.2607 0.0290272C1.19375 0.0677301 1.15201 0.13947 1.15201 0.217283V9.78261C1.15201 9.86044 1.19375 9.93218 1.2607 9.97086C1.29418 9.99 1.33201 9.99999 1.36939 9.99999C1.40721 9.99999 1.44461 9.99043 1.47853 9.97086L9.73948 5.18819C9.80643 5.14906 9.84775 5.07732 9.84775 4.99993C9.84775 4.92255 9.80643 4.85038 9.73948 4.8117Z"
+                                    fill="#333"></path>
+                            </g>
+                            <defs>
+                                <clipPath id="clip0-387">
+                                    <rect width="10" height="10" fill="white" transform="translate(0.499939)"></rect>
+                                </clipPath>
+                            </defs>
+                        </svg>
+                    </a>
+                </div>
+                <div class="row">
+                    <div class="col-6" style="padding: 5.6px;">
+                        <a href="#" class="card">
+                            <div style="padding: 8px; text-align: center;">
+                                <img class="card-img-top rounded-corner"
+                                    src="https://via.placeholder.com/400x400/ff7f7f/333333?text=Product+1">
+                            </div>
+                            <div class="card-body" style="padding: 8px 16px;">
+                                <h4 class="card-title">Product Title</h4>
+                                <div style="height:3rem; margin-bottom:0rem">
+                                    <h6 class="card-text">Product Description</h6>
+                                </div>
+                                <h4 class="price-text" style="margin-top: 10px;">Product Price</h4>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-6" style="padding: 5.6px;">
+                        <a href="#" class="card">
+                            <div style="padding: 8px; text-align: center;">
+                                <img class="card-img-top rounded-corner"
+                                    src="https://via.placeholder.com/400x400/ff7f7f/333333?text=Product+2">
+                            </div>
+                            <div class="card-body" style="padding: 8px 16px;">
+                                <h4 class="card-title">Product Title</h4>
+                                <div style="height:3rem; margin-bottom:0rem">
+                                    <h6 class="card-text">Product Description</h6>
+                                </div>
+                                <h4 class="price-text" style="margin-top: 10px;">Product Price</h4>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-6" style="padding: 5.6px;">
+                        <a href="#" class="card">
+                            <div style="padding: 8px; text-align: center;">
+                                <img class="card-img-top rounded-corner"
+                                    src="https://via.placeholder.com/400x400/ff7f7f/333333?text=Product+3">
+                            </div>
+                            <div class="card-body" style="padding: 8px 16px;">
+                                <h4 class="card-title">Product Title</h4>
+                                <div style="height:3rem; margin-bottom:0rem">
+                                    <h6 class="card-text">Product Description</h6>
+                                </div>
+                                <h4 class="price-text" style="margin-top: 10px;">Product Price</h4>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-6" style="padding: 5.6px;">
+                        <a href="#" class="card">
+                            <div style="padding: 8px; text-align: center;">
+                                <img class="card-img-top rounded-corner"
+                                    src="https://via.placeholder.com/400x400/ff7f7f/333333?text=Product+4">
+                            </div>
+                            <div class="card-body" style="padding: 8px 16px;">
+                                <h4 class="card-title">Product Title</h4>
+                                <div style="height:3rem; margin-bottom:0rem">
+                                    <h6 class="card-text">Product Description</h6>
+                                </div>
+                                <h4 class="price-text" style="margin-top: 10px;">Product Price</h4>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-6" style="padding: 5.6px;">
+                        <a href="#" class="card">
+                            <div style="padding: 8px; text-align: center;">
+                                <img class="card-img-top rounded-corner"
+                                    src="https://via.placeholder.com/400x400/ff7f7f/333333?text=Product+5">
+                            </div>
+                            <div class="card-body" style="padding: 8px 16px;">
+                                <h4 class="card-title">Product Title</h4>
+                                <div style="height:3rem; margin-bottom:0rem">
+                                    <h6 class="card-text">Product Description</h6>
+                                </div>
+                                <h4 class="price-text" style="margin-top: 10px;">Product Price</h4>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-6" style="padding: 5.6px;">
+                        <a href="#" class="card">
+                            <div style="padding: 8px; text-align: center;">
+                                <img class="card-img-top rounded-corner"
+                                    src="https://via.placeholder.com/400x400/ff7f7f/333333?text=Product+6">
+                            </div>
+                            <div class="card-body" style="padding: 8px 16px;">
+                                <h4 class="card-title">Product Title</h4>
+                                <div style="height:3rem; margin-bottom:0rem">
+                                    <h6 class="card-text">Product Description</h6>
+                                </div>
+                                <h4 class="price-text" style="margin-top: 10px;">Product Price</h4>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-6" style="padding: 5.6px;">
+                        <a href="#" class="card">
+                            <div style="padding: 8px; text-align: center;">
+                                <img class="card-img-top rounded-corner"
+                                    src="https://via.placeholder.com/400x400/ff7f7f/333333?text=Product+7">
+                            </div>
+                            <div class="card-body" style="padding: 8px 16px;">
+                                <h4 class="card-title">Product Title</h4>
+                                <div style="height:3rem; margin-bottom:0rem">
+                                    <h6 class="card-text">Product Description</h6>
+                                </div>
+                                <h4 class="price-text" style="margin-top: 10px;">Product Price</h4>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-6" style="padding: 5.6px;">
+                        <a href="#" class="card">
+                            <div style="padding: 8px; text-align: center;">
+                                <img class="card-img-top rounded-corner"
+                                    src="https://via.placeholder.com/400x400/ff7f7f/333333?text=Product+8">
+                            </div>
+                            <div class="card-body" style="padding: 8px 16px;">
+                                <h4 class="card-title">Product Title</h4>
+                                <div style="height:3rem; margin-bottom:0rem">
+                                    <h6 class="card-text">Product Description</h6>
+                                </div>
+                                <h4 class="price-text" style="margin-top: 10px;">Product Price</h4>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mid page banner -->
+        <div class="row" style="margin: 64px -6px;">
+            <a class="col-sm-12 col-md-6" style="padding: 10px;">
+                <img src="https://via.placeholder.com/590x165/ff7f7f/333333?text=Banner+1" class="rounded-corner">
+            </a>
+            <a class="col-sm-12 col-md-6" style="padding: 10px;">
+                <img src="https://via.placeholder.com/590x165/ff7f7f/333333?text=Banner+2" class="rounded-corner">
+            </a>
+        </div>
+
+        <!-- Notebook -->
+        <div class="notebook-container">
+            <div class="row align-items-center bottom-gap-md">
+                <div class="col-1">
+                    <i class="bi bi-laptop fs-lg" style="color: red;"></i><br>
+                </div>
+                <h4 class="col-11 fw-bold fs-md">โน๊ตบุ๊ค</h4>
+            </div>
+            <!-- ทำให้เป็น Dynamic content (เวลากดยี่ห้ออื่นเปลี่ยน Text [All Products] เป็น [Acer] เปลี่ยนเนื้อหาที่แสดง ฯลฯ ) -->
+            <div>
+                <div class="category-header-box">
+                    <h4 class="fw-bold fs-md">All Products</h4>
+                    <a href="#">
+                        <span style="color: #7D879C; font-size: 14px;">ดูทั้งหมด</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10" fill="none"
+                            class="injected-svg" data-src="/assets/images/icons/right-arrow.svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <g clip-path="url(#clip0-387)">
+                                <path
+                                    d="M9.73948 4.8117L1.47853 0.0290272C1.41158 -0.00967573 1.32853 -0.00967573 1.2607 0.0290272C1.19375 0.0677301 1.15201 0.13947 1.15201 0.217283V9.78261C1.15201 9.86044 1.19375 9.93218 1.2607 9.97086C1.29418 9.99 1.33201 9.99999 1.36939 9.99999C1.40721 9.99999 1.44461 9.99043 1.47853 9.97086L9.73948 5.18819C9.80643 5.14906 9.84775 5.07732 9.84775 4.99993C9.84775 4.92255 9.80643 4.85038 9.73948 4.8117Z"
+                                    fill="#333"></path>
+                            </g>
+                            <defs>
+                                <clipPath id="clip0-387">
+                                    <rect width="10" height="10" fill="white" transform="translate(0.499939)"></rect>
+                                </clipPath>
+                            </defs>
+                        </svg>
+                    </a>
+                </div>
+                <div class="row">
+                    <div class="col-6" style="padding: 5.6px;">
+                        <a href="#" class="card">
+                            <div style="padding: 8px; text-align: center;">
+                                <img class="card-img-top rounded-corner"
+                                    src="https://via.placeholder.com/400x400/ff7f7f/333333?text=Product+1">
+                            </div>
+                            <div class="card-body" style="padding: 8px 16px;">
+                                <h4 class="card-title">Product Title</h4>
+                                <div style="height:3rem; margin-bottom:0rem">
+                                    <h6 class="card-text">Product Description</h6>
+                                </div>
+                                <h4 class="price-text" style="margin-top: 10px;">Product Price</h4>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-6" style="padding: 5.6px;">
+                        <a href="#" class="card">
+                            <div style="padding: 8px; text-align: center;">
+                                <img class="card-img-top rounded-corner"
+                                    src="https://via.placeholder.com/400x400/ff7f7f/333333?text=Product+2">
+                            </div>
+                            <div class="card-body" style="padding: 8px 16px;">
+                                <h4 class="card-title">Product Title</h4>
+                                <div style="height:3rem; margin-bottom:0rem">
+                                    <h6 class="card-text">Product Description</h6>
+                                </div>
+                                <h4 class="price-text" style="margin-top: 10px;">Product Price</h4>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-6" style="padding: 5.6px;">
+                        <a href="#" class="card">
+                            <div style="padding: 8px; text-align: center;">
+                                <img class="card-img-top rounded-corner"
+                                    src="https://via.placeholder.com/400x400/ff7f7f/333333?text=Product+3">
+                            </div>
+                            <div class="card-body" style="padding: 8px 16px;">
+                                <h4 class="card-title">Product Title</h4>
+                                <div style="height:3rem; margin-bottom:0rem">
+                                    <h6 class="card-text">Product Description</h6>
+                                </div>
+                                <h4 class="price-text" style="margin-top: 10px;">Product Price</h4>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-6" style="padding: 5.6px;">
+                        <a href="#" class="card">
+                            <div style="padding: 8px; text-align: center;">
+                                <img class="card-img-top rounded-corner"
+                                    src="https://via.placeholder.com/400x400/ff7f7f/333333?text=Product+4">
+                            </div>
+                            <div class="card-body" style="padding: 8px 16px;">
+                                <h4 class="card-title">Product Title</h4>
+                                <div style="height:3rem; margin-bottom:0rem">
+                                    <h6 class="card-text">Product Description</h6>
+                                </div>
+                                <h4 class="price-text" style="margin-top: 10px;">Product Price</h4>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-6" style="padding: 5.6px;">
+                        <a href="#" class="card">
+                            <div style="padding: 8px; text-align: center;">
+                                <img class="card-img-top rounded-corner"
+                                    src="https://via.placeholder.com/400x400/ff7f7f/333333?text=Product+5">
+                            </div>
+                            <div class="card-body" style="padding: 8px 16px;">
+                                <h4 class="card-title">Product Title</h4>
+                                <div style="height:3rem; margin-bottom:0rem">
+                                    <h6 class="card-text">Product Description</h6>
+                                </div>
+                                <h4 class="price-text" style="margin-top: 10px;">Product Price</h4>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-6" style="padding: 5.6px;">
+                        <a href="#" class="card">
+                            <div style="padding: 8px; text-align: center;">
+                                <img class="card-img-top rounded-corner"
+                                    src="https://via.placeholder.com/400x400/ff7f7f/333333?text=Product+6">
+                            </div>
+                            <div class="card-body" style="padding: 8px 16px;">
+                                <h4 class="card-title">Product Title</h4>
+                                <div style="height:3rem; margin-bottom:0rem">
+                                    <h6 class="card-text">Product Description</h6>
+                                </div>
+                                <h4 class="price-text" style="margin-top: 10px;">Product Price</h4>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-6" style="padding: 5.6px;">
+                        <a href="#" class="card">
+                            <div style="padding: 8px; text-align: center;">
+                                <img class="card-img-top rounded-corner"
+                                    src="https://via.placeholder.com/400x400/ff7f7f/333333?text=Product+7">
+                            </div>
+                            <div class="card-body" style="padding: 8px 16px;">
+                                <h4 class="card-title">Product Title</h4>
+                                <div style="height:3rem; margin-bottom:0rem">
+                                    <h6 class="card-text">Product Description</h6>
+                                </div>
+                                <h4 class="price-text" style="margin-top: 10px;">Product Price</h4>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-6" style="padding: 5.6px;">
+                        <a href="#" class="card">
+                            <div style="padding: 8px; text-align: center;">
+                                <img class="card-img-top rounded-corner"
+                                    src="https://via.placeholder.com/400x400/ff7f7f/333333?text=Product+8">
+                            </div>
+                            <div class="card-body" style="padding: 8px 16px;">
+                                <h4 class="card-title">Product Title</h4>
+                                <div style="height:3rem; margin-bottom:0rem">
+                                    <h6 class="card-text">Product Description</h6>
+                                </div>
+                                <h4 class="price-text" style="margin-top: 10px;">Product Price</h4>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
     <!-- Bottom tab for mobile -->
-    <div class="fixed-bottom container row" style="background-color: white;">
-        <div class="col-3">Bottom tab for mobile</div>
-        <div class="col-3">Bottom tab for mobile</div>
-        <div class="col-3">Bottom tab for mobile</div>
-        <div class="col-3">Bottom tab for mobile</div>
+    <div class="fixed-bottom row align-content-center px-2 bottom-tab">
+        <!-- อย่าลืมใส่ลิ้งค์และทำให้เปลี่ยนสีเวลาเปลี่ยนไปหน้าอื่นๆ -->
+        <a href="#" class="col" style="color: red;">
+            <i class="bi bi-house-door" style="font-size: 20px;"></i><br>
+            หน้าแรก
+        </a>
+        <a href="#" class="col" style="color: black;">
+            <i class="bi bi-grid" style="font-size: 20px;"></i><br>
+            หมวดหมู่
+        </a>
+        <a href="#" class="col-3" style="color: black;">
+            <i class="bi bi-tools" style="font-size: 20px;"></i><br>
+            จัดสเปกคอม
+        </a>
+        <a href="#" class="col" style="color: black;">
+            <i class="bi bi-basket2" style="font-size: 20px;"></i><br>
+            ตะกร้า
+        </a>
+        <a href="#" class="col" style="color: black;">
+            <i class="bi bi-person" style="font-size: 20px;"></i><br>
+            บัญชี
+        </a>
     </div>
+
+    <footer>
+        <div style="background-color: black; color: white; height: 500px;">
+            FOOTER
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script/script.js"></script>
 </body>
 
 </html>
