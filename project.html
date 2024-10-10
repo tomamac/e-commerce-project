@@ -17,30 +17,91 @@
     <!-- Header -->
     <div class="container-fluid px-3 align-content-center fs-sm"
         style="background-color: black; height: 40px; color: white;">
-        <div class="row">
+        <div class="row align-items-center justify-content-between mx-auto" style="max-width: 1200px; height: 100%;">
+
             <!-- อย่าลืมเปลี่ยนเป็นรูปโลโก้ -->
-            <div class="col-6">LOGO</div>
-            <!-- ปุ่มกดร้านค้าใกล้คุณ อย่าลืมใส่ลิ้งค์ -->
-            <a href="#" class="col-3" style="color: white;">ร้านค้าใกล้คุณ</a>
-            <!-- Dropdown เลือกภาษา อย่าลืมเปลี่ยนเป็นรูปธง กับฟังก์ชั่นเปลี่ยนรูปธงกับตรงคำว่า"ไทย"เป็น "ENG" -->
-            <div class="col-3 dropdown-center dropdown row" data-bs-toggle="dropdown">
-                <div class="col-6">FLAG</div>
-                <span class="dropdown-toggle col-6 fw-bold" aria-expanded="false">ไทย</span>
-                <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">ไทย</a></li>
-                    <li><a class="dropdown-item" href="#">ENG</a></li>
-                </ul>
+            <div class="col d-lg-none">LOGO</div>
+            <div class="d-none d-lg-flex col-lg-auto row">
+                <!-- Phone no. -->
+                <div class="col-auto">
+                    <div class="row">
+                        <i class="bi bi-telephone col-auto p-0" style="font-size: 14px;"></i>
+                        <span class="col-auto pe-3 align-content-center">01 234 5678</span>
+                    </div>
+                </div>
+                <!-- Email -->
+                <div class="col-auto">
+                    <div class="row">
+                        <i class="bi bi-envelope col-auto p-0" style="font-size: 14px;"></i>
+                        <span class="col-auto align-content-center">email@email.com</span>
+                    </div>
+                </div>
+                <!-- Slogan -->
+                <span class="col align-content-center">
+                    สโลแกน Lorem ipsum dolor sit amet.
+                </span>
+            </div>
+
+            <div class="col col-lg-auto row">
+                <!-- ปุ่มกดร้านค้าใกล้คุณ อย่าลืมใส่ลิ้งค์ -->
+                <a href="#" class="col-6" style="color: white;">ร้านค้าใกล้คุณ</a>
+                <!-- Dropdown เลือกภาษา อย่าลืมเปลี่ยนเป็นรูปธง กับฟังก์ชั่นเปลี่ยนรูปธงกับตรงคำว่า"ไทย"เป็น "ENG" -->
+                <div class="col-6 dropdown-center dropdown row" data-bs-toggle="dropdown">
+                    <div class="col-6">FLAG</div>
+                    <span class="dropdown-toggle col-6 fw-bold" aria-expanded="false">ไทย</span>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">ไทย</a></li>
+                        <li><a class="dropdown-item" href="#">ENG</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
 
     <!-- Sticky Header/Search bar-->
-    <div class="container sticky-top align-content-center" style="background-color: white; height: 64px; z-index: 100;">
-        <input class="rounded-pill search" type="text" placeholder="ค้นหาสินค้า">
+    <div class="container-fluid sticky-top" style="background-color: white; height: 64px; z-index: 100;">
+        <div class="mx-auto row align-items-center align-content-center justify-content-between"
+            style="max-width: 1200px; height: 100%;">
+            <!-- LOGO -->
+            <a href="#" class="d-none d-lg-flex col-auto align-items-center" style="height: 50px;">logo</a>
+            <input class="col-auto mx-auto rounded-pill search" type="text" placeholder="ค้นหาสินค้า">
+            <div class="col-auto">
+                <div class="row">
+                    <a class="d-none d-lg-flex col-auto mx-2 rounded-circle align-items-center"
+                        style="background-color: #F3F5F9; height: 44px;">
+                        <i class="bi bi-person" style="font-size: 20px;"></i>
+                    </a>
+                    <a class="d-none d-lg-flex col-auto mx-2 rounded-circle align-items-center"
+                        style="background-color: #F3F5F9; height: 44px;">
+                        <i class="bi bi-basket2" style="font-size: 20px;"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Category nav bar -->
+    <div class="d-none d-lg-block container-fluid align-content-center" style="background-color: white; height: 60px;">
+        <div class="d-flex mx-auto row justify-content-between" style="max-width: 1200px;">
+            <div class="d-flex align-items-center justify-content-between col-auto rounded-corner"
+                style="background-color: #F3F5F9; height: 40px; padding: 11px 24px; width: 190px;">
+                <i class="bi bi-grid-fill fs-lg"></i>
+                <span class="fw-semibold" style="font-size: 14px;">กูทำไม่เป็น</span>
+                <i class="bi bi-chevron-right" style="font-size: 14px;"></i>
+            </div>
+            <div class="d-flex align-items-center col-auto">
+                <div class="row">
+                    <a href="#" class="col-auto pe-0" style="margin-right: 32px;">หน้าแรก</a>
+                    <a href="#" class="col-auto p-0" style="margin-right: 32px;">คอมพิวเตอร์เซ็ต</a>
+                    <a href="#" class="col-auto p-0" style="margin-right: 32px;">ติดต่อเรา</a>
+                    <a href="#" class="col-auto ps-0" style="margin-right: 32px;">เกี่ยวกับเรา</a>
+                </div>
+            </div>
+        </div>
     </div>
 
     <!-- Content -->
-    <div class="container">
+    <div class="container p-lg-0" style="max-width: 1200px;">
 
         <!-- Floating chat button -->
         <a class="rounded-circle  align-content-center chat-button">
@@ -120,8 +181,8 @@
 
         <!-- หมวดหมู่สินค้า -->
         <div class="category-container">
-            <div class="row fs-md fw-bold bottom-gap-md">
-                <div class="col-1">
+            <div class="row bottom-gap-md align-items-center">
+                <div class="col-auto">
                     <svg xmlns="http://www.w3.org/2000/svg" id="glyph" height="24" viewBox="0 0 64 64" width="24"
                         class="injected-svg" data-src="/assets/images/icons/categories.svg"
                         xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -130,71 +191,125 @@
                             fill="#E94560"></path>
                     </svg>
                 </div>
-                <h4 class="col-11 fs-md fw-bold">หมวดหมู่สินค้า</h4>
+                <h4 class="col-auto fs-md fw-bold p-0 m-0">หมวดหมู่สินค้า</h4>
             </div>
 
             <!-- category box -->
             <!-- อย่าลืมเพิ่มรูปให้แต่ละหมวดหมู่ -->
             <div class="row">
-                <a href="#" class="col-6">
-                    <div class="category-box">
-                        ซีพียู</div>
+                <a href="#" class="col-6 col-lg-2">
+                    <div class="row category-box align-items-center">
+                        <div class="col-auto p-0" style="width: 25px;">
+                            <i class="bi bi-cpu fs-lg"></i>
+                        </div>
+                        <div class="col-8 mx-auto p-0">ซีพียู</div>
+                    </div>
                 </a>
-                <a href="#" class="col-6">
-                    <div class="category-box">
-                        เมนบอร์ด</div>
+                <a href="#" class="col-6 col-lg-2">
+                    <div class="row category-box align-items-center">
+                        <div class="col-auto p-0" style="width: 25px;">
+                            <i class="bi bi-motherboard fs-lg"></i>
+                        </div>
+                        <div class="col-8 mx-auto p-0">เมนบอร์ด</div>
+                    </div>
                 </a>
-                <a href="#" class="col-6">
-                    <div class="category-box">
-                        การ์ดจอ</div>
+                <a href="#" class="col-6 col-lg-2">
+                    <div class="row category-box align-items-center">
+                        <div class="col-auto p-0" style="width: 25px;">
+                            <i class="bi bi-gpu-card fs-lg"></i>
+                        </div>
+                        <div class="col-8 mx-auto p-0">การ์ดจอ</div>
+                    </div>
                 </a>
-                <a href="#" class="col-6">
-                    <div class="category-box">
-                        แรม</div>
+                <a href="#" class="col-6 col-lg-2">
+                    <div class="row category-box align-items-center">
+                        <div class="col-auto p-0" style="width: 25px;">
+                            <i class="bi bi-memory fs-lg"></i>
+                        </div>
+                        <div class="col-8 mx-auto p-0">แรม</div>
+                    </div>
                 </a>
-                <a href="#" class="col-6">
-                    <div class="category-box">
-                        ฮาร์ดไดร์ฟ</div>
+                <a href="#" class="col-6 col-lg-2">
+                    <div class="row category-box align-items-center">
+                        <div class="col-auto p-0" style="width: 25px;">
+                            <i class="bi bi-device-hdd fs-lg"></i>
+                        </div>
+                        <div class="col-8 mx-auto p-0">ฮาร์ดไดร์ฟ</div>
+                    </div>
                 </a>
-                <a href="#" class="col-6">
-                    <div class="category-box">
-                        พาวเวอร์ซัพพลาย</div>
+                <a href="#" class="col-6 col-lg-2">
+                    <div class="row category-box align-items-center">
+                        <div class="col-auto p-0" style="width: 25px;">
+                            <i class="bi bi-safe2 fs-lg"></i>
+                        </div>
+                        <div class="col-8 mx-auto p-0">พาวเวอร์ซัพพลาย</div>
+                    </div>
                 </a>
-                <a href="#" class="col-6">
-                    <div class="category-box">
-                        ชุดระบายความร้อน</div>
+                <a href="#" class="col-6 col-lg-2">
+                    <div class="row category-box align-items-center">
+                        <div class="col-auto p-0" style="width: 25px;">
+                            <i class="bi bi-fan fs-lg"></i>
+                        </div>
+                        <div class="col-8 mx-auto p-0">ชุดระบายความร้อน</div>
+                    </div>
                 </a>
-                <a href="#" class="col-6">
-                    <div class="category-box">
-                        โน๊ตบุ๊ค</div>
+                <a href="#" class="col-6 col-lg-2">
+                    <div class="row category-box align-items-center">
+                        <div class="col-auto p-0" style="width: 25px;">
+                            <i class="bi bi-laptop fs-lg"></i>
+                        </div>
+                        <div class="col-8 mx-auto p-0">โน๊ตบุ๊ค</div>
+                    </div>
                 </a>
-                <a href="#" class="col-6">
-                    <div class="category-box">
-                        เมาส์</div>
+                <a href="#" class="col-6 col-lg-2">
+                    <div class="row category-box align-items-center">
+                        <div class="col-auto p-0" style="width: 25px;">
+                            <i class="bi bi-mouse fs-lg"></i>
+                        </div>
+                        <div class="col-8 mx-auto p-0">เมาส์</div>
+                    </div>
                 </a>
-                <a href="#" class="col-6">
-                    <div class="category-box">
-                        คีย์บอร์ด</div>
+                <a href="#" class="col-6 col-lg-2">
+                    <div class="row category-box align-items-center">
+                        <div class="col-auto p-0" style="width: 25px;">
+                            <i class="bi bi-keyboard fs-lg"></i>
+                        </div>
+                        <div class="col-8 mx-auto p-0">คีย์บอร์ด</div>
+                    </div>
                 </a>
-                <a href="#" class="col-6">
-                    <div class="category-box">
-                        จอมอนิเตอร์</div>
+                <a href="#" class="col-6 col-lg-2">
+                    <div class="row category-box align-items-center">
+                        <div class="col-auto p-0" style="width: 25px;">
+                            <i class="bi bi-display fs-lg"></i>
+                        </div>
+                        <div class="col-8 mx-auto p-0">จอมอนิเตอร์</div>
+                    </div>
                 </a>
-                <a href="#" class="col-6">
-                    <div class="category-box">
-                        อุปกรณ์เสริม</div>
+                <a href="#" class="col-6 col-lg-2">
+                    <div class="row category-box align-items-center">
+                        <div class="col-auto p-0" style="width: 25px;">
+                            <i class="bi bi-controller fs-lg"></i>
+                        </div>
+                        <div class="col-8 mx-auto p-0">อุปกรณ์เสริม</div>
+                    </div>
                 </a>
-                <a href="#" class="col-6">
-                    <div class="category-box">
-                        เคส</div>
+                <a href="#" class="col-6 col-lg-2">
+                    <div class="row category-box align-items-center">
+                        <div class="col-auto p-0" style="width: 25px;">
+                            <i class="bi bi-pc fs-lg"></i>
+                        </div>
+                        <div class="col-8 mx-auto p-0">เคส</div>
+                    </div>
                 </a>
+
+
             </div>
         </div>
 
         <!-- สินค้ามาใหม่ -->
         <div class="bottom-gap-lg">
-            <div class="row bottom-gap-md fs-md fw-bold">
-                <div class="col-1">
+            <div class="row bottom-gap-md fs-md fw-bold" style="margin-left: 16px;">
+                <div class="col-auto p-0">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                         class="injected-svg" data-src="/assets/images/icons/new-product-1.svg"
                         xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -210,7 +325,7 @@
                         </defs>
                     </svg>
                 </div>
-                <h4 class="col-11 fw-bold fs-md">สินค้ามาใหม่</h4>
+                <h4 class="col-auto fw-bold fs-md">สินค้ามาใหม่</h4>
             </div>
             <div class="newproduct-carousel slider">
                 <!-- เพิ่มรูปกับใส่ลิ้งค์ตรงนี้ -->
@@ -310,153 +425,218 @@
         <!-- สินค้า DIY -->
         <div class="diy-container">
             <div class="row align-items-center bottom-gap-md">
-                <div class="col-1">
+                <div class="col-auto">
                     <i class="bi bi-tools fs-lg" style="color: red;"></i><br>
                 </div>
-                <h4 class="col-11 fw-bold fs-md">สินค้า DIY</h4>
+                <h4 class="col-auto fw-bold fs-md">สินค้า DIY</h4>
             </div>
             <!-- ทำให้เป็น Dynamic content (เวลากด Category อื่นเปลี่ยน Text [ซีพียู] เป็น [เมนบอร์ด] เปลี่ยนเนื้อหาที่แสดง ฯลฯ ) -->
-            <div>
-                <div class="category-header-box">
-                    <h4 class="fw-bold fs-md">ซีพียู</h4>
-                    <a href="#">
-                        <span style="color: #7D879C; font-size: 14px;">ดูทั้งหมด</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10" fill="none"
-                            class="injected-svg" data-src="/assets/images/icons/right-arrow.svg"
-                            xmlns:xlink="http://www.w3.org/1999/xlink">
-                            <g clip-path="url(#clip0-387)">
-                                <path
-                                    d="M9.73948 4.8117L1.47853 0.0290272C1.41158 -0.00967573 1.32853 -0.00967573 1.2607 0.0290272C1.19375 0.0677301 1.15201 0.13947 1.15201 0.217283V9.78261C1.15201 9.86044 1.19375 9.93218 1.2607 9.97086C1.29418 9.99 1.33201 9.99999 1.36939 9.99999C1.40721 9.99999 1.44461 9.99043 1.47853 9.97086L9.73948 5.18819C9.80643 5.14906 9.84775 5.07732 9.84775 4.99993C9.84775 4.92255 9.80643 4.85038 9.73948 4.8117Z"
-                                    fill="#333"></path>
-                            </g>
-                            <defs>
-                                <clipPath id="clip0-387">
-                                    <rect width="10" height="10" fill="white" transform="translate(0.499939)"></rect>
-                                </clipPath>
-                            </defs>
-                        </svg>
-                    </a>
+            <div class="row">
+                <div class="d-none d-lg-block col-3" style="padding: 20px 20px 20px 0px;">
+                    <div class="my-2 rounded-corner row align-items-center side-category-box active">
+                        <div class="col-auto p-0" style="width: 40px; height: 100%;">
+                            <i class="bi bi-cpu fs-lg"></i>
+                        </div>
+                        <div class="col-auto">ซีพียู</div>
+                    </div>
+                    <div class="my-2 rounded-corner row align-items-center side-category-box">
+                        <div class="col-auto p-0" style="width: 40px; height: 100%;">
+                            <i class="bi bi-motherboard fs-lg"></i>
+                        </div>
+                        <div class="col-auto">เมนบอร์ด</div>
+                    </div>
+                    <div class="my-2 rounded-corner row align-items-center side-category-box">
+                        <div class="col-auto p-0" style="width: 40px; height: 100%;">
+                            <i class="bi bi-gpu-card fs-lg"></i>
+                        </div>
+                        <div class="col-auto">การ์ดจอ</div>
+                    </div>
+                    <div class="my-2 rounded-corner row align-items-center side-category-box">
+                        <div class="col-auto p-0" style="width: 40px; height: 100%;">
+                            <i class="bi bi-memory fs-lg"></i>
+                        </div>
+                        <div class="col-auto">แรม</div>
+                    </div>
+                    <div class="my-2 rounded-corner row align-items-center side-category-box">
+                        <div class="col-auto p-0" style="width: 40px; height: 100%;">
+                            <i class="bi bi-safe2 fs-lg"></i>
+                        </div>
+                        <div class="col-auto">พาวเวอร์ซัพพลาย</div>
+                    </div>
+                    <div class="my-2 rounded-corner row align-items-center side-category-box">
+                        <div class="col-auto p-0" style="width: 40px; height: 100%;">
+                            <i class="bi bi-mouse fs-lg"></i>
+                        </div>
+                        <div class="col-auto">เมาส์</div>
+                    </div>
+                    <div class="my-2 rounded-corner row align-items-center side-category-box">
+                        <div class="col-auto p-0" style="width: 40px; height: 100%;">
+                            <i class="bi bi-keyboard fs-lg"></i>
+                        </div>
+                        <div class="col-auto">คีย์บอร์ด</div>
+                    </div>
+                    <div class="my-2 rounded-corner row align-items-center side-category-box">
+                        <div class="col-auto p-0" style="width: 40px; height: 100%;">
+                            <i class="bi bi-display fs-lg"></i>
+                        </div>
+                        <div class="col-auto">จอมอนิเตอร์</div>
+                    </div>
+                    <div class="my-2 rounded-corner row align-items-center side-category-box">
+                        <div class="col-auto p-0" style="width: 40px; height: 100%;">
+                            <i class="bi bi-controller fs-lg"></i>
+                        </div>
+                        <div class="col-auto">อุปกรณ์เสริม</div>
+                    </div>
+                    <div class="my-2 rounded-corner row align-items-center side-category-box">
+                        <div class="col-auto p-0" style="width: 40px; height: 100%;">
+                            <i class="bi bi-fan fs-lg"></i>
+                        </div>
+                        <div class="col-auto">ชุดระบายความร้อน</div>
+                    </div>
                 </div>
-                <div class="row">
-                    <div class="col-6" style="padding: 5.6px;">
-                        <a href="#" class="card">
-                            <div style="padding: 8px; text-align: center;">
-                                <img class="card-img-top rounded-corner"
-                                    src="https://via.placeholder.com/400x400/ff7f7f/333333?text=Product+1">
-                            </div>
-                            <div class="card-body" style="padding: 8px 16px;">
-                                <h4 class="card-title">Product Title</h4>
-                                <div style="height:3rem; margin-bottom:0rem">
-                                    <h6 class="card-text">Product Description</h6>
-                                </div>
-                                <h4 class="price-text" style="margin-top: 10px;">Product Price</h4>
-                            </div>
+                <div class="col-sm-12 col-lg-9 p-0">
+                    <div class="category-header-box">
+                        <h4 class="fw-bold fs-md">ซีพียู</h4>
+                        <a href="#">
+                            <span style="color: #7D879C; font-size: 14px;">ดูทั้งหมด</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10"
+                                fill="none" class="injected-svg" data-src="/assets/images/icons/right-arrow.svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <g clip-path="url(#clip0-387)">
+                                    <path
+                                        d="M9.73948 4.8117L1.47853 0.0290272C1.41158 -0.00967573 1.32853 -0.00967573 1.2607 0.0290272C1.19375 0.0677301 1.15201 0.13947 1.15201 0.217283V9.78261C1.15201 9.86044 1.19375 9.93218 1.2607 9.97086C1.29418 9.99 1.33201 9.99999 1.36939 9.99999C1.40721 9.99999 1.44461 9.99043 1.47853 9.97086L9.73948 5.18819C9.80643 5.14906 9.84775 5.07732 9.84775 4.99993C9.84775 4.92255 9.80643 4.85038 9.73948 4.8117Z"
+                                        fill="#333"></path>
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0-387">
+                                        <rect width="10" height="10" fill="white" transform="translate(0.499939)">
+                                        </rect>
+                                    </clipPath>
+                                </defs>
+                            </svg>
                         </a>
                     </div>
-                    <div class="col-6" style="padding: 5.6px;">
-                        <a href="#" class="card">
-                            <div style="padding: 8px; text-align: center;">
-                                <img class="card-img-top rounded-corner"
-                                    src="https://via.placeholder.com/400x400/ff7f7f/333333?text=Product+2">
-                            </div>
-                            <div class="card-body" style="padding: 8px 16px;">
-                                <h4 class="card-title">Product Title</h4>
-                                <div style="height:3rem; margin-bottom:0rem">
-                                    <h6 class="card-text">Product Description</h6>
+                    <div class="row">
+                        <div class="col-6 col-lg-3" style="padding: 5.6px;">
+                            <a href="#" class="card">
+                                <div style="padding: 8px; text-align: center;">
+                                    <img class="card-img-top rounded-corner"
+                                        src="https://via.placeholder.com/400x400/ff7f7f/333333?text=Product+1">
                                 </div>
-                                <h4 class="price-text" style="margin-top: 10px;">Product Price</h4>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-6" style="padding: 5.6px;">
-                        <a href="#" class="card">
-                            <div style="padding: 8px; text-align: center;">
-                                <img class="card-img-top rounded-corner"
-                                    src="https://via.placeholder.com/400x400/ff7f7f/333333?text=Product+3">
-                            </div>
-                            <div class="card-body" style="padding: 8px 16px;">
-                                <h4 class="card-title">Product Title</h4>
-                                <div style="height:3rem; margin-bottom:0rem">
-                                    <h6 class="card-text">Product Description</h6>
+                                <div class="card-body" style="padding: 8px 16px;">
+                                    <h4 class="card-title">Product Title</h4>
+                                    <div style="height:3rem; margin-bottom:0rem">
+                                        <h6 class="card-text">Product Description</h6>
+                                    </div>
+                                    <h4 class="price-text" style="margin-top: 10px;">Product Price</h4>
                                 </div>
-                                <h4 class="price-text" style="margin-top: 10px;">Product Price</h4>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-6" style="padding: 5.6px;">
-                        <a href="#" class="card">
-                            <div style="padding: 8px; text-align: center;">
-                                <img class="card-img-top rounded-corner"
-                                    src="https://via.placeholder.com/400x400/ff7f7f/333333?text=Product+4">
-                            </div>
-                            <div class="card-body" style="padding: 8px 16px;">
-                                <h4 class="card-title">Product Title</h4>
-                                <div style="height:3rem; margin-bottom:0rem">
-                                    <h6 class="card-text">Product Description</h6>
+                            </a>
+                        </div>
+                        <div class="col-6 col-lg-3" style="padding: 5.6px;">
+                            <a href="#" class="card">
+                                <div style="padding: 8px; text-align: center;">
+                                    <img class="card-img-top rounded-corner"
+                                        src="https://via.placeholder.com/400x400/ff7f7f/333333?text=Product+2">
                                 </div>
-                                <h4 class="price-text" style="margin-top: 10px;">Product Price</h4>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-6" style="padding: 5.6px;">
-                        <a href="#" class="card">
-                            <div style="padding: 8px; text-align: center;">
-                                <img class="card-img-top rounded-corner"
-                                    src="https://via.placeholder.com/400x400/ff7f7f/333333?text=Product+5">
-                            </div>
-                            <div class="card-body" style="padding: 8px 16px;">
-                                <h4 class="card-title">Product Title</h4>
-                                <div style="height:3rem; margin-bottom:0rem">
-                                    <h6 class="card-text">Product Description</h6>
+                                <div class="card-body" style="padding: 8px 16px;">
+                                    <h4 class="card-title">Product Title</h4>
+                                    <div style="height:3rem; margin-bottom:0rem">
+                                        <h6 class="card-text">Product Description</h6>
+                                    </div>
+                                    <h4 class="price-text" style="margin-top: 10px;">Product Price</h4>
                                 </div>
-                                <h4 class="price-text" style="margin-top: 10px;">Product Price</h4>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-6" style="padding: 5.6px;">
-                        <a href="#" class="card">
-                            <div style="padding: 8px; text-align: center;">
-                                <img class="card-img-top rounded-corner"
-                                    src="https://via.placeholder.com/400x400/ff7f7f/333333?text=Product+6">
-                            </div>
-                            <div class="card-body" style="padding: 8px 16px;">
-                                <h4 class="card-title">Product Title</h4>
-                                <div style="height:3rem; margin-bottom:0rem">
-                                    <h6 class="card-text">Product Description</h6>
+                            </a>
+                        </div>
+                        <div class="col-6 col-lg-3" style="padding: 5.6px;">
+                            <a href="#" class="card">
+                                <div style="padding: 8px; text-align: center;">
+                                    <img class="card-img-top rounded-corner"
+                                        src="https://via.placeholder.com/400x400/ff7f7f/333333?text=Product+3">
                                 </div>
-                                <h4 class="price-text" style="margin-top: 10px;">Product Price</h4>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-6" style="padding: 5.6px;">
-                        <a href="#" class="card">
-                            <div style="padding: 8px; text-align: center;">
-                                <img class="card-img-top rounded-corner"
-                                    src="https://via.placeholder.com/400x400/ff7f7f/333333?text=Product+7">
-                            </div>
-                            <div class="card-body" style="padding: 8px 16px;">
-                                <h4 class="card-title">Product Title</h4>
-                                <div style="height:3rem; margin-bottom:0rem">
-                                    <h6 class="card-text">Product Description</h6>
+                                <div class="card-body" style="padding: 8px 16px;">
+                                    <h4 class="card-title">Product Title</h4>
+                                    <div style="height:3rem; margin-bottom:0rem">
+                                        <h6 class="card-text">Product Description</h6>
+                                    </div>
+                                    <h4 class="price-text" style="margin-top: 10px;">Product Price</h4>
                                 </div>
-                                <h4 class="price-text" style="margin-top: 10px;">Product Price</h4>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-6" style="padding: 5.6px;">
-                        <a href="#" class="card">
-                            <div style="padding: 8px; text-align: center;">
-                                <img class="card-img-top rounded-corner"
-                                    src="https://via.placeholder.com/400x400/ff7f7f/333333?text=Product+8">
-                            </div>
-                            <div class="card-body" style="padding: 8px 16px;">
-                                <h4 class="card-title">Product Title</h4>
-                                <div style="height:3rem; margin-bottom:0rem">
-                                    <h6 class="card-text">Product Description</h6>
+                            </a>
+                        </div>
+                        <div class="col-6 col-lg-3" style="padding: 5.6px;">
+                            <a href="#" class="card">
+                                <div style="padding: 8px; text-align: center;">
+                                    <img class="card-img-top rounded-corner"
+                                        src="https://via.placeholder.com/400x400/ff7f7f/333333?text=Product+4">
                                 </div>
-                                <h4 class="price-text" style="margin-top: 10px;">Product Price</h4>
-                            </div>
-                        </a>
+                                <div class="card-body" style="padding: 8px 16px;">
+                                    <h4 class="card-title">Product Title</h4>
+                                    <div style="height:3rem; margin-bottom:0rem">
+                                        <h6 class="card-text">Product Description</h6>
+                                    </div>
+                                    <h4 class="price-text" style="margin-top: 10px;">Product Price</h4>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-6 col-lg-3" style="padding: 5.6px;">
+                            <a href="#" class="card">
+                                <div style="padding: 8px; text-align: center;">
+                                    <img class="card-img-top rounded-corner"
+                                        src="https://via.placeholder.com/400x400/ff7f7f/333333?text=Product+5">
+                                </div>
+                                <div class="card-body" style="padding: 8px 16px;">
+                                    <h4 class="card-title">Product Title</h4>
+                                    <div style="height:3rem; margin-bottom:0rem">
+                                        <h6 class="card-text">Product Description</h6>
+                                    </div>
+                                    <h4 class="price-text" style="margin-top: 10px;">Product Price</h4>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-6 col-lg-3" style="padding: 5.6px;">
+                            <a href="#" class="card">
+                                <div style="padding: 8px; text-align: center;">
+                                    <img class="card-img-top rounded-corner"
+                                        src="https://via.placeholder.com/400x400/ff7f7f/333333?text=Product+6">
+                                </div>
+                                <div class="card-body" style="padding: 8px 16px;">
+                                    <h4 class="card-title">Product Title</h4>
+                                    <div style="height:3rem; margin-bottom:0rem">
+                                        <h6 class="card-text">Product Description</h6>
+                                    </div>
+                                    <h4 class="price-text" style="margin-top: 10px;">Product Price</h4>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-6 col-lg-3" style="padding: 5.6px;">
+                            <a href="#" class="card">
+                                <div style="padding: 8px; text-align: center;">
+                                    <img class="card-img-top rounded-corner"
+                                        src="https://via.placeholder.com/400x400/ff7f7f/333333?text=Product+7">
+                                </div>
+                                <div class="card-body" style="padding: 8px 16px;">
+                                    <h4 class="card-title">Product Title</h4>
+                                    <div style="height:3rem; margin-bottom:0rem">
+                                        <h6 class="card-text">Product Description</h6>
+                                    </div>
+                                    <h4 class="price-text" style="margin-top: 10px;">Product Price</h4>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-6 col-lg-3" style="padding: 5.6px;">
+                            <a href="#" class="card">
+                                <div style="padding: 8px; text-align: center;">
+                                    <img class="card-img-top rounded-corner"
+                                        src="https://via.placeholder.com/400x400/ff7f7f/333333?text=Product+8">
+                                </div>
+                                <div class="card-body" style="padding: 8px 16px;">
+                                    <h4 class="card-title">Product Title</h4>
+                                    <div style="height:3rem; margin-bottom:0rem">
+                                        <h6 class="card-text">Product Description</h6>
+                                    </div>
+                                    <h4 class="price-text" style="margin-top: 10px;">Product Price</h4>
+                                </div>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -464,164 +644,219 @@
 
         <!-- Mid page banner -->
         <div class="row" style="margin: 64px -6px;">
-            <a class="col-sm-12 col-md-6" style="padding: 10px;">
-                <img src="https://via.placeholder.com/590x165/ff7f7f/333333?text=Banner+1" class="rounded-corner">
+            <a class="col-12 col-md-6" style="padding: 10px;">
+                <img src="https://via.placeholder.com/590x165/ff7f7f/333333?text=Banner+1" class="rounded-corner"
+                    style="width: 100%;">
             </a>
-            <a class="col-sm-12 col-md-6" style="padding: 10px;">
-                <img src="https://via.placeholder.com/590x165/ff7f7f/333333?text=Banner+2" class="rounded-corner">
+            <a class="col-12 col-md-6" style="padding: 10px;">
+                <img src="https://via.placeholder.com/590x165/ff7f7f/333333?text=Banner+2" class="rounded-corner"
+                    style="width: 100%;">
             </a>
         </div>
 
         <!-- Notebook -->
         <div class="notebook-container">
             <div class="row align-items-center bottom-gap-md">
-                <div class="col-1">
+                <div class="col-auto">
                     <i class="bi bi-laptop fs-lg" style="color: red;"></i><br>
                 </div>
-                <h4 class="col-11 fw-bold fs-md">โน๊ตบุ๊ค</h4>
+                <h4 class="col-auto fw-bold fs-md">โน๊ตบุ๊ค</h4>
             </div>
-            <!-- ทำให้เป็น Dynamic content (เวลากดยี่ห้ออื่นเปลี่ยน Text [All Products] เป็น [Acer] เปลี่ยนเนื้อหาที่แสดง ฯลฯ ) -->
-            <div>
-                <div class="category-header-box">
-                    <h4 class="fw-bold fs-md">All Products</h4>
-                    <a href="#">
-                        <span style="color: #7D879C; font-size: 14px;">ดูทั้งหมด</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10" fill="none"
-                            class="injected-svg" data-src="/assets/images/icons/right-arrow.svg"
-                            xmlns:xlink="http://www.w3.org/1999/xlink">
-                            <g clip-path="url(#clip0-387)">
-                                <path
-                                    d="M9.73948 4.8117L1.47853 0.0290272C1.41158 -0.00967573 1.32853 -0.00967573 1.2607 0.0290272C1.19375 0.0677301 1.15201 0.13947 1.15201 0.217283V9.78261C1.15201 9.86044 1.19375 9.93218 1.2607 9.97086C1.29418 9.99 1.33201 9.99999 1.36939 9.99999C1.40721 9.99999 1.44461 9.99043 1.47853 9.97086L9.73948 5.18819C9.80643 5.14906 9.84775 5.07732 9.84775 4.99993C9.84775 4.92255 9.80643 4.85038 9.73948 4.8117Z"
-                                    fill="#333"></path>
-                            </g>
-                            <defs>
-                                <clipPath id="clip0-387">
-                                    <rect width="10" height="10" fill="white" transform="translate(0.499939)"></rect>
-                                </clipPath>
-                            </defs>
-                        </svg>
-                    </a>
+            <div class="row">
+                <div class="d-none d-lg-block col-3" style="padding: 20px 20px 20px 0px;">
+                    <div class="my-2 rounded-corner row align-items-center side-category-box active">
+                        <div class="col-auto mx-auto">โน๊ตบุ๊คทั้งหมด</div>
+                    </div>
+                    <div class="my-2 rounded-corner row align-items-center side-category-box">
+                        <div class="col-auto p-0" style="width: 40px; height: 100%;">
+                            <img src="image/Acer_2011.png" style="object-fit: contain; width: 100%; height: 100%;">
+                        </div>
+                        <div class="col-auto">ACER</div>
+                    </div>
+                    <div class="my-2 rounded-corner row align-items-center side-category-box">
+                        <div class="col-auto p-0" style="width: 40px; height: 100%;">
+                            <img src="image/Asus-Logo.png" style="object-fit: contain; width: 100%; height: 100%;">
+                        </div>
+                        <div class="col-auto">ASUS</div>
+                    </div>
+                    <div class="my-2 rounded-corner row align-items-center side-category-box">
+                        <div class="col-auto p-0" style="width: 40px; height: 100%;">
+                            <img src="image/Dell-Logo.png" style="object-fit: contain; width: 100%; height: 100%;">
+                        </div>
+                        <div class="col-auto">DELL</div>
+                    </div>
+                    <div class="my-2 rounded-corner row align-items-center side-category-box">
+                        <div class="col-auto p-0" style="width: 40px; height: 100%;">
+                            <img src="image/gigabyte.png" style="object-fit: contain; width: 100%; height: 100%;">
+                        </div>
+                        <div class="col-auto">GIGABYTE</div>
+                    </div>
+                    <div class="my-2 rounded-corner row align-items-center side-category-box">
+                        <div class="col-auto p-0" style="width: 40px; height: 100%;">
+                            <img src="image/lenovo-logo-10.png" style="object-fit: contain; width: 100%; height: 100%;">
+                        </div>
+                        <div class="col-auto">LENOVO</div>
+                    </div>
+                    <div class="my-2 rounded-corner row align-items-center side-category-box">
+                        <div class="col-auto p-0" style="width: 40px; height: 100%;">
+                            <img src="image/msi.png" style="object-fit: contain; width: 100%; height: 100%;">
+                        </div>
+                        <div class="col-auto">MSI</div>
+                    </div>
+                    <div class="my-2 rounded-corner row align-items-center side-category-box">
+                        <div class="col-auto p-0" style="width: 40px; height: 100%;">
+                            <img src="image/hp.png" style="object-fit: contain; width: 100%; height: 100%;">
+                        </div>
+                        <div class="col-auto">HP</div>
+                    </div>
+                    <div class="my-2 rounded-corner row align-items-center side-category-box other">
+                        <div class="col-auto mx-auto">ดูสินค้าทั้งหมด</div>
+                    </div>
                 </div>
-                <div class="row">
-                    <div class="col-6" style="padding: 5.6px;">
-                        <a href="#" class="card">
-                            <div style="padding: 8px; text-align: center;">
-                                <img class="card-img-top rounded-corner"
-                                    src="https://via.placeholder.com/400x400/ff7f7f/333333?text=Product+1">
-                            </div>
-                            <div class="card-body" style="padding: 8px 16px;">
-                                <h4 class="card-title">Product Title</h4>
-                                <div style="height:3rem; margin-bottom:0rem">
-                                    <h6 class="card-text">Product Description</h6>
-                                </div>
-                                <h4 class="price-text" style="margin-top: 10px;">Product Price</h4>
-                            </div>
+                <!-- ทำให้เป็น Dynamic content (เวลากดยี่ห้ออื่นเปลี่ยน Text [All Products] เป็น [Acer] เปลี่ยนเนื้อหาที่แสดง ฯลฯ ) -->
+                <div class="col-sm-12 col-lg-9 p-0">
+                    <div class="category-header-box">
+                        <h4 class="fw-bold fs-md">All Products</h4>
+                        <a href="#">
+                            <span style="color: #7D879C; font-size: 14px;">ดูทั้งหมด</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10"
+                                fill="none" class="injected-svg" data-src="/assets/images/icons/right-arrow.svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <g clip-path="url(#clip0-387)">
+                                    <path
+                                        d="M9.73948 4.8117L1.47853 0.0290272C1.41158 -0.00967573 1.32853 -0.00967573 1.2607 0.0290272C1.19375 0.0677301 1.15201 0.13947 1.15201 0.217283V9.78261C1.15201 9.86044 1.19375 9.93218 1.2607 9.97086C1.29418 9.99 1.33201 9.99999 1.36939 9.99999C1.40721 9.99999 1.44461 9.99043 1.47853 9.97086L9.73948 5.18819C9.80643 5.14906 9.84775 5.07732 9.84775 4.99993C9.84775 4.92255 9.80643 4.85038 9.73948 4.8117Z"
+                                        fill="#333"></path>
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0-387">
+                                        <rect width="10" height="10" fill="white" transform="translate(0.499939)">
+                                        </rect>
+                                    </clipPath>
+                                </defs>
+                            </svg>
                         </a>
                     </div>
-                    <div class="col-6" style="padding: 5.6px;">
-                        <a href="#" class="card">
-                            <div style="padding: 8px; text-align: center;">
-                                <img class="card-img-top rounded-corner"
-                                    src="https://via.placeholder.com/400x400/ff7f7f/333333?text=Product+2">
-                            </div>
-                            <div class="card-body" style="padding: 8px 16px;">
-                                <h4 class="card-title">Product Title</h4>
-                                <div style="height:3rem; margin-bottom:0rem">
-                                    <h6 class="card-text">Product Description</h6>
+                    <div class="row">
+                        <div class="col-6 col-lg-3" style="padding: 5.6px;">
+                            <a href="#" class="card">
+                                <div style="padding: 8px; text-align: center;">
+                                    <img class="card-img-top rounded-corner"
+                                        src="https://via.placeholder.com/400x400/ff7f7f/333333?text=Product+1">
                                 </div>
-                                <h4 class="price-text" style="margin-top: 10px;">Product Price</h4>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-6" style="padding: 5.6px;">
-                        <a href="#" class="card">
-                            <div style="padding: 8px; text-align: center;">
-                                <img class="card-img-top rounded-corner"
-                                    src="https://via.placeholder.com/400x400/ff7f7f/333333?text=Product+3">
-                            </div>
-                            <div class="card-body" style="padding: 8px 16px;">
-                                <h4 class="card-title">Product Title</h4>
-                                <div style="height:3rem; margin-bottom:0rem">
-                                    <h6 class="card-text">Product Description</h6>
+                                <div class="card-body" style="padding: 8px 16px;">
+                                    <h4 class="card-title">Product Title</h4>
+                                    <div style="height:3rem; margin-bottom:0rem">
+                                        <h6 class="card-text">Product Description</h6>
+                                    </div>
+                                    <h4 class="price-text" style="margin-top: 10px;">Product Price</h4>
                                 </div>
-                                <h4 class="price-text" style="margin-top: 10px;">Product Price</h4>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-6" style="padding: 5.6px;">
-                        <a href="#" class="card">
-                            <div style="padding: 8px; text-align: center;">
-                                <img class="card-img-top rounded-corner"
-                                    src="https://via.placeholder.com/400x400/ff7f7f/333333?text=Product+4">
-                            </div>
-                            <div class="card-body" style="padding: 8px 16px;">
-                                <h4 class="card-title">Product Title</h4>
-                                <div style="height:3rem; margin-bottom:0rem">
-                                    <h6 class="card-text">Product Description</h6>
+                            </a>
+                        </div>
+                        <div class="col-6 col-lg-3" style="padding: 5.6px;">
+                            <a href="#" class="card">
+                                <div style="padding: 8px; text-align: center;">
+                                    <img class="card-img-top rounded-corner"
+                                        src="https://via.placeholder.com/400x400/ff7f7f/333333?text=Product+2">
                                 </div>
-                                <h4 class="price-text" style="margin-top: 10px;">Product Price</h4>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-6" style="padding: 5.6px;">
-                        <a href="#" class="card">
-                            <div style="padding: 8px; text-align: center;">
-                                <img class="card-img-top rounded-corner"
-                                    src="https://via.placeholder.com/400x400/ff7f7f/333333?text=Product+5">
-                            </div>
-                            <div class="card-body" style="padding: 8px 16px;">
-                                <h4 class="card-title">Product Title</h4>
-                                <div style="height:3rem; margin-bottom:0rem">
-                                    <h6 class="card-text">Product Description</h6>
+                                <div class="card-body" style="padding: 8px 16px;">
+                                    <h4 class="card-title">Product Title</h4>
+                                    <div style="height:3rem; margin-bottom:0rem">
+                                        <h6 class="card-text">Product Description</h6>
+                                    </div>
+                                    <h4 class="price-text" style="margin-top: 10px;">Product Price</h4>
                                 </div>
-                                <h4 class="price-text" style="margin-top: 10px;">Product Price</h4>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-6" style="padding: 5.6px;">
-                        <a href="#" class="card">
-                            <div style="padding: 8px; text-align: center;">
-                                <img class="card-img-top rounded-corner"
-                                    src="https://via.placeholder.com/400x400/ff7f7f/333333?text=Product+6">
-                            </div>
-                            <div class="card-body" style="padding: 8px 16px;">
-                                <h4 class="card-title">Product Title</h4>
-                                <div style="height:3rem; margin-bottom:0rem">
-                                    <h6 class="card-text">Product Description</h6>
+                            </a>
+                        </div>
+                        <div class="col-6 col-lg-3" style="padding: 5.6px;">
+                            <a href="#" class="card">
+                                <div style="padding: 8px; text-align: center;">
+                                    <img class="card-img-top rounded-corner"
+                                        src="https://via.placeholder.com/400x400/ff7f7f/333333?text=Product+3">
                                 </div>
-                                <h4 class="price-text" style="margin-top: 10px;">Product Price</h4>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-6" style="padding: 5.6px;">
-                        <a href="#" class="card">
-                            <div style="padding: 8px; text-align: center;">
-                                <img class="card-img-top rounded-corner"
-                                    src="https://via.placeholder.com/400x400/ff7f7f/333333?text=Product+7">
-                            </div>
-                            <div class="card-body" style="padding: 8px 16px;">
-                                <h4 class="card-title">Product Title</h4>
-                                <div style="height:3rem; margin-bottom:0rem">
-                                    <h6 class="card-text">Product Description</h6>
+                                <div class="card-body" style="padding: 8px 16px;">
+                                    <h4 class="card-title">Product Title</h4>
+                                    <div style="height:3rem; margin-bottom:0rem">
+                                        <h6 class="card-text">Product Description</h6>
+                                    </div>
+                                    <h4 class="price-text" style="margin-top: 10px;">Product Price</h4>
                                 </div>
-                                <h4 class="price-text" style="margin-top: 10px;">Product Price</h4>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-6" style="padding: 5.6px;">
-                        <a href="#" class="card">
-                            <div style="padding: 8px; text-align: center;">
-                                <img class="card-img-top rounded-corner"
-                                    src="https://via.placeholder.com/400x400/ff7f7f/333333?text=Product+8">
-                            </div>
-                            <div class="card-body" style="padding: 8px 16px;">
-                                <h4 class="card-title">Product Title</h4>
-                                <div style="height:3rem; margin-bottom:0rem">
-                                    <h6 class="card-text">Product Description</h6>
+                            </a>
+                        </div>
+                        <div class="col-6 col-lg-3" style="padding: 5.6px;">
+                            <a href="#" class="card">
+                                <div style="padding: 8px; text-align: center;">
+                                    <img class="card-img-top rounded-corner"
+                                        src="https://via.placeholder.com/400x400/ff7f7f/333333?text=Product+4">
                                 </div>
-                                <h4 class="price-text" style="margin-top: 10px;">Product Price</h4>
-                            </div>
-                        </a>
+                                <div class="card-body" style="padding: 8px 16px;">
+                                    <h4 class="card-title">Product Title</h4>
+                                    <div style="height:3rem; margin-bottom:0rem">
+                                        <h6 class="card-text">Product Description</h6>
+                                    </div>
+                                    <h4 class="price-text" style="margin-top: 10px;">Product Price</h4>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-6 col-lg-3" style="padding: 5.6px;">
+                            <a href="#" class="card">
+                                <div style="padding: 8px; text-align: center;">
+                                    <img class="card-img-top rounded-corner"
+                                        src="https://via.placeholder.com/400x400/ff7f7f/333333?text=Product+5">
+                                </div>
+                                <div class="card-body" style="padding: 8px 16px;">
+                                    <h4 class="card-title">Product Title</h4>
+                                    <div style="height:3rem; margin-bottom:0rem">
+                                        <h6 class="card-text">Product Description</h6>
+                                    </div>
+                                    <h4 class="price-text" style="margin-top: 10px;">Product Price</h4>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-6 col-lg-3" style="padding: 5.6px;">
+                            <a href="#" class="card">
+                                <div style="padding: 8px; text-align: center;">
+                                    <img class="card-img-top rounded-corner"
+                                        src="https://via.placeholder.com/400x400/ff7f7f/333333?text=Product+6">
+                                </div>
+                                <div class="card-body" style="padding: 8px 16px;">
+                                    <h4 class="card-title">Product Title</h4>
+                                    <div style="height:3rem; margin-bottom:0rem">
+                                        <h6 class="card-text">Product Description</h6>
+                                    </div>
+                                    <h4 class="price-text" style="margin-top: 10px;">Product Price</h4>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-6 col-lg-3" style="padding: 5.6px;">
+                            <a href="#" class="card">
+                                <div style="padding: 8px; text-align: center;">
+                                    <img class="card-img-top rounded-corner"
+                                        src="https://via.placeholder.com/400x400/ff7f7f/333333?text=Product+7">
+                                </div>
+                                <div class="card-body" style="padding: 8px 16px;">
+                                    <h4 class="card-title">Product Title</h4>
+                                    <div style="height:3rem; margin-bottom:0rem">
+                                        <h6 class="card-text">Product Description</h6>
+                                    </div>
+                                    <h4 class="price-text" style="margin-top: 10px;">Product Price</h4>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-6 col-lg-3" style="padding: 5.6px;">
+                            <a href="#" class="card">
+                                <div style="padding: 8px; text-align: center;">
+                                    <img class="card-img-top rounded-corner"
+                                        src="https://via.placeholder.com/400x400/ff7f7f/333333?text=Product+8">
+                                </div>
+                                <div class="card-body" style="padding: 8px 16px;">
+                                    <h4 class="card-title">Product Title</h4>
+                                    <div style="height:3rem; margin-bottom:0rem">
+                                        <h6 class="card-text">Product Description</h6>
+                                    </div>
+                                    <h4 class="price-text" style="margin-top: 10px;">Product Price</h4>
+                                </div>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -629,7 +864,7 @@
 
     </div>
     <!-- Bottom tab for mobile -->
-    <div class="fixed-bottom row align-content-center px-2 bottom-tab">
+    <div class="d-lg-none fixed-bottom row align-content-center px-2 bottom-tab">
         <!-- อย่าลืมใส่ลิ้งค์และทำให้เปลี่ยนสีเวลาเปลี่ยนไปหน้าอื่นๆ -->
         <a href="#" class="col" style="color: red;">
             <i class="bi bi-house-door" style="font-size: 20px;"></i><br>

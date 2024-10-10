@@ -1,5 +1,4 @@
 /* Custom CSS */
-
 body {
     background: rgb(246, 249, 252);
     font-family: 'Noto Sans Thai', 'Helvetica Neue', sans-serif;
@@ -8,6 +7,10 @@ body {
 a {
     color: black;
     text-decoration: none;
+}
+
+.rounded-corner {
+    border-radius: 10px;
 }
 
 .fs-sm {
@@ -22,10 +25,6 @@ a {
     font-size: 24px;
 }
 
-.no-container-sm {
-    margin: 0px -12px;
-}
-
 .bottom-gap-md {
     margin-bottom: 24px;
 }
@@ -38,11 +37,12 @@ input[type=text].search {
     box-sizing: border-box;
     border: 1px solid rgba(128, 128, 128, 0.2);
     outline: none;
-    background: url('image/search.svg') no-repeat;
+    background: url('../image/search.svg') no-repeat;
     background-position: 10px;
     padding-left: 40px;
     height: 40px;
     width: 100%;
+    max-width: 670px;
 }
 
 input[type=text]:focus.search {
@@ -124,12 +124,46 @@ input[type=text]:focus.search {
 .category-box {
     align-content: center;
     background-color: white;
-    margin: 12px;
+    margin: 12px 0px;
     border-radius: 8px;
-    padding: 12px;
+    padding: 0px 12px;
     height: 60px;
     color: black;
     box-shadow: 0px 0px 45px rgba(0, 0, 0, 0.03);
+}
+
+.side-category-box {
+    background-color: rgba(255, 255, 255, 0);
+    height: 50.75px;
+    padding: 12px 16px;
+    width: 240px;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.side-category-box:hover {
+    box-shadow: 0px 6px 26px rgba(0, 0, 0, 0.05);
+}
+
+.side-category-box.active {
+    background-color: white;
+    color: red;
+    height: 50.75px;
+    padding: 12px 16px;
+    width: 240px;
+    box-shadow: 0px 6px 26px rgba(0, 0, 0, 0.05);
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.side-category-box.other {
+    background-color: white;
+    color: red;
+    height: 50.75px;
+    padding: 12px 16px;
+    width: 240px;
+    font-weight: 600;
+    font-size: 14px;
 }
 
 .newproduct img {
@@ -166,6 +200,7 @@ input[type=text]:focus.search {
     width: 159px;
     height: 159px;
     object-fit: cover;
+    width: 100%;
 }
 
 .diy-container .card .card-title,
@@ -204,6 +239,26 @@ input[type=text]:focus.search {
     box-shadow: 0px 1px 4px 3px rgba(0, 0, 0, 0.1);
 }
 
+@media only screen and (max-width: 599px) {
+    .no-container-sm {
+        margin: 0px -12px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .no-container-lg {
+        margin: 0px -60px;
+    }
+
+    .topcarousel{
+        border-radius: 10px;
+    }
+
+    .chat-button{
+        bottom: 20px;
+    }
+}
+
 /* Slick Slider */
 
 .slick-slide {
@@ -232,11 +287,6 @@ input[type=text]:focus.search {
     margin: 0px 5.609px;
     width: 200px;
     border: none;
-}
-
-.rounded-corner {
-    width: 100%;
-    border-radius: 10px;
 }
 
 .slick-slide img {

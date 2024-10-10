@@ -39,7 +39,7 @@ $(document).ready(function(){
     });
     $('.newproduct-carousel').slick({
         variableWidth:true,
-        slidesToShow: 6,
+        slidesToShow: 5,
         slidesToScroll: 1,
         infinite:false,
         autoplay: false,
