@@ -176,3 +176,109 @@ fromSlider.oninput = () => controlFromSlider(fromSlider, toSlider, fromInput);
 toSlider.oninput = () => controlToSlider(fromSlider, toSlider, toInput);
 fromInput.oninput = () => controlFromInput(fromSlider, fromInput, toInput, toSlider);
 toInput.oninput = () => controlToInput(toSlider, fromInput, toInput, toSlider);
+
+$('input[type=range]#fromSlider').on('change', function() {
+    $('input[type=range]#fromSliderModal').val($(this).val())
+    $('input[type=number]#fromInputModal').val($(this).val())
+    controlFromSliderModal(fromSliderModal, toSliderModal, fromInputModal);
+  });
+
+$('input[type=range]#toSlider').on('change', function() {
+    $('input[type=range]#toSliderModal').val($(this).val())
+    $('input[type=range]#toInputModal').val($(this).val())
+    controlToSliderModal(fromSliderModal, toSliderModal, toInputModal);
+  });
+// Modal range slider
+function controlFromInputModal(fromSliderModal, fromInputModal, toInputModal, controlSlider) {
+    const [from, to] = getParsed(fromInputModal, toInputModal);
+    fillSliderModal(fromInputModal, toInputModal, '#C6C6C6', 'rgb(251,171,171)', controlSlider);
+    if (from > to) {
+        fromSliderModal.value = to;
+        fromInputModal.value = to;
+    } else {
+        fromSliderModal.value = from;
+    }
+}
+    
+function controlToInputModal(toSliderModal, fromInputModal, toInputModal, controlSlider) {
+    const [from, to] = getParsed(fromInputModal, toInputModal);
+    fillSliderModal(fromInputModal, toInputModal, '#C6C6C6', 'rgb(251,171,171)', controlSlider);
+    setToggleAccessibleModal(toInputModal);
+    if (from <= to) {
+        toSliderModal.value = to;
+        toInputModal.value = to;
+    } else {
+        toInputModal.value = from;
+    }
+}
+
+function controlFromSliderModal(fromSliderModal, toSliderModal, fromInputModal) {
+  const [from, to] = getParsed(fromSliderModal, toSliderModal);
+  fillSliderModal(fromSliderModal, toSliderModal, '#C6C6C6', 'rgb(251,171,171)', toSliderModal);
+  if (from > to) {
+    fromSliderModal.value = to;
+    fromInputModal.value = to;
+  } else {
+    fromInputModal.value = from;
+  }
+}
+
+function controlToSliderModal(fromSliderModal, toSliderModal, toInputModal) {
+  const [from, to] = getParsed(fromSliderModal, toSliderModal);
+  fillSliderModal(fromSliderModal, toSliderModal, '#C6C6C6', 'rgb(251,171,171)', toSliderModal);
+  setToggleAccessibleModal(toSliderModal);
+  if (from <= to) {
+    toSliderModal.value = to;
+    toInputModal.value = to;
+  } else {
+    toInputModal.value = from;
+    toSliderModal.value = from;
+  }
+}
+
+function fillSliderModal(from, to, sliderColor, rangeColor, controlSlider) {
+    const rangeDistance = to.max-to.min;
+    const fromPosition = from.value - to.min;
+    const toPosition = to.value - to.min;
+    controlSlider.style.background = `linear-gradient(
+      to right,
+      ${sliderColor} 0%,
+      ${sliderColor} ${(fromPosition)/(rangeDistance)*100}%,
+      ${rangeColor} ${((fromPosition)/(rangeDistance))*100}%,
+      ${rangeColor} ${(toPosition)/(rangeDistance)*100}%, 
+      ${sliderColor} ${(toPosition)/(rangeDistance)*100}%, 
+      ${sliderColor} 100%)`;
+}
+
+function setToggleAccessibleModal(currentTarget) {
+  const toSliderModal = document.querySelector('#toSliderModal');
+  if (Number(currentTarget.value) <= 0 ) {
+    toSliderModal.style.zIndex = 2;
+  } else {
+    toSliderModal.style.zIndex = 0;
+  }
+}
+
+const fromSliderModal = document.querySelector('#fromSliderModal');
+const toSliderModal = document.querySelector('#toSliderModal');
+const fromInputModal = document.querySelector('#fromInputModal');
+const toInputModal = document.querySelector('#toInputModal');
+fillSliderModal(fromSliderModal, toSliderModal, '#C6C6C6', 'rgb(251,171,171)', toSliderModal);
+setToggleAccessibleModal(toSliderModal);
+
+fromSliderModal.oninput = () => controlFromSliderModal(fromSliderModal, toSliderModal, fromInputModal);
+toSliderModal.oninput = () => controlToSliderModal(fromSliderModal, toSliderModal, toInputModal);
+fromInputModal.oninput = () => controlFromInputModal(fromSliderModal, fromInputModal, toInputModal, toSliderModal);
+toInputModal.oninput = () => controlToInputModal(toSliderModal, fromInputModal, toInputModal, toSliderModal);
+
+$('input[type=range]#fromSliderModal').on('change', function() {
+    $('input[type=range]#fromSlider').val($(this).val())
+    $('input[type=number]#fromInput').val($(this).val())
+    controlFromSlider(fromSlider, toSlider, fromInput);
+  });
+
+$('input[type=range]#toSliderModal').on('change', function() {
+    $('input[type=range]#toSlider').val($(this).val())
+    $('input[type=range]#toInput').val($(this).val())
+    controlToSlider(fromSlider, toSlider, toInput);
+  });

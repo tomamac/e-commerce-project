@@ -67,14 +67,216 @@
             <input class="col-auto mx-auto rounded-pill search" type="text" placeholder="ค้นหาสินค้า">
             <div class="col-auto">
                 <div class="row">
-                    <a class="d-none d-lg-flex col-auto mx-2 rounded-circle align-items-center"
-                        style="background-color: #F3F5F9; height: 44px;">
+                    <a class="d-none d-lg-flex col-auto mx-2 rounded-circle align-items-center" data-bs-toggle="modal"
+                        data-bs-target="#LoginModal" style="background-color: #F3F5F9; height: 44px;">
                         <i class="bi bi-person" style="font-size: 20px;"></i>
                     </a>
                     <a class="d-none d-lg-flex col-auto mx-2 rounded-circle align-items-center"
                         style="background-color: #F3F5F9; height: 44px;">
                         <i class="bi bi-basket2" style="font-size: 20px;"></i>
                     </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Login Modal -->
+    <div class="modal fade" id="LoginModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <!-- Modal header -->
+                <div class="modal-header" style="border-bottom: none; padding: 16px 60px; margin-top: 15px;">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+                        style="opacity: 1;"></button>
+                </div>
+
+                <!-- Modal body -->
+                <!-- ถ้าจะใช้ยืนยันน่าจะต้องครอบ tag form ไม่แน่ใจ -->
+                <div class="modal-body align-items-center" style="padding: 48px 60px; padding-bottom: 16px;">
+                    <h3 class="fw-bold" style="font-size: 20px; text-align: center;">เข้าสู่ระบบ</h3>
+
+                    <!-- email -->
+                    <div class="login-text-container">
+                        <i class="bi bi-at fs-lg" style="position: absolute; left: 1rem; margin-top: 5px;"></i>
+                        <input class="rounded-corner login-text" type="email" placeholder="อีเมล">
+                    </div>
+
+                    <!-- password -->
+                    <div class="login-text-container">
+                        <i class="bi bi-at fs-lg" style="position: absolute; left: 1rem; margin-top: 5px;"></i>
+                        <input class="rounded-corner login-text" type="password" placeholder="รหัสผ่าน">
+                    </div>
+
+                    <!-- keep me sign in -->
+                    <div class="d-flex align-items-center" style="margin-bottom: 24px;">
+                        <input type="checkbox" id="rememberme">
+                        <label for="rememberme"
+                            style="color: rgb(125, 135, 156); font-size: 14px; cursor: pointer;">จำฉันเข้าระบบ</label>
+                    </div>
+
+                    <button type="submit" class="rounded-corner login">เข้าสู่ระบบ</button>
+                    <div class="d-flex align-items-center justify-content-center">
+                        <span style="font-size: 14px; color: rgb(125, 135, 156);">ไม่ใช่สมาชิก?</span>
+                        <a data-bs-toggle="modal" data-bs-target="#RegisterModal"
+                            style="border-bottom: 1px solid black; margin-left: 8px; font-size: 14px; font-weight: 600;">สมัครสมาชิก</a>
+                    </div>
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer"
+                    style="border-top: none; background-color: rgb(243, 245, 249); justify-content: center;">
+                    <a data-bs-toggle="modal" data-bs-target="#ForgotModal">
+                        <h6 style="font-weight: 600; font-size: 14px; border-bottom: 1px solid black;">ลืมรหัสผ่าน ?
+                        </h6>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Register Modal -->
+    <div class="modal fade" id="RegisterModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
+            <div class="modal-content">
+                <!-- Modal header -->
+                <div class="modal-header" style="border-bottom: none; padding: 16px 60px; margin-top: 15px;">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+                        style="opacity: 1;"></button>
+                </div>
+
+                <!-- Modal body -->
+                <!-- ถ้าจะใช้ยืนยันน่าจะต้องครอบ tag form ไม่แน่ใจ -->
+                <div class="modal-body align-items-center" style="padding: 16px;">
+                    <div class="container-fluid">
+                        <h3 class="fw-bold"
+                            style="font-size: 20px; text-align: center; color: red; margin-bottom: 32px;">ลงทะเบียน</h3>
+
+                        <div class="row">
+                            <!-- มันน่าจะต้องครอบ form แต่ไม่แน่ใจ -->
+                            <!-- name -->
+                            <div class="col-12 col-lg-6">
+                                <label for="name"
+                                    style="margin-bottom: 6px; font-size: 0.875rem; display: block;">ชื่อ</label>
+                                <div class="register-text-container">
+                                    <input id="name" class="rounded-corner register-text" type="text"
+                                        placeholder="ชื่อ">
+                                </div>
+                            </div>
+
+                            <!-- lastname -->
+                            <div class="col-12 col-lg-6">
+                                <label for="lastname"
+                                    style="margin-bottom: 6px; font-size: 0.875rem; display: block;">นามสกุล</label>
+                                <div class="register-text-container">
+                                    <input id="name" class="rounded-corner register-text" type="text"
+                                        placeholder="นามสกุล">
+                                </div>
+                            </div>
+
+                            <!-- PhoneNo. -->
+                            <div class="col-12 col-lg-6">
+                                <label for="phone"
+                                    style="margin-bottom: 6px; font-size: 0.875rem; display: block;">เบอร์โทรศัพท์</label>
+                                <div class="register-text-container">
+                                    <input id="phone" class="rounded-corner register-text" type="text" maxlength="10"
+                                        placeholder="เบอร์โทรศัพท์">
+                                </div>
+                            </div>
+
+                            <!-- BirthDate -->
+                            <div class="col-12 col-lg-6">
+                                <label for="birthdate"
+                                    style="margin-bottom: 6px; font-size: 0.875rem; display: block;">วันเกิด</label>
+                                <div class="register-text-container">
+                                    <input id="birthdate" class="rounded-corner register-text" type="date">
+                                </div>
+                            </div>
+
+                            <!-- email -->
+                            <div class="col-12">
+                                <label for="email"
+                                    style="margin-bottom: 6px; font-size: 0.875rem; display: block;">อีเมล</label>
+                                <div class="register-text-container">
+                                    <input id="email" class="rounded-corner register-text" type="email"
+                                        placeholder="อีเมล">
+                                </div>
+                            </div>
+
+                            <!-- password -->
+                            <div class="col-12">
+                                <label for="pw"
+                                    style="margin-bottom: 6px; font-size: 0.875rem; display: block;">รหัสผ่าน</label>
+                                <div class="register-text-container">
+                                    <input id="pw" class="rounded-corner register-text" type="password"
+                                        placeholder="รหัสผ่าน">
+                                </div>
+                            </div>
+                            <!-- confirm password -->
+                            <div class="col-12">
+                                <label for="confirmpw"
+                                    style="margin-bottom: 6px; font-size: 0.875rem; display: block;">ยืนยันรหัสผ่าน</label>
+                                <div class="register-text-container">
+                                    <input id="confirmpw" class="rounded-corner register-text" type="password"
+                                        placeholder="ยืนยันรหัสผ่าน">
+                                </div>
+                            </div>
+
+                            <button type="submit" class="rounded-corner login">สมัครสมาชิก</button>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer"
+                    style="border-top: none; background-color: rgb(243, 245, 249); justify-content: center;">
+                    <div class="d-flex align-items-center justify-content-center">
+                        <span style="font-size: 14px; color: rgb(125, 135, 156);">เป็นสมาชิก?</span>
+                        <a data-bs-toggle="modal" data-bs-target="#LoginModal"
+                            style="border-bottom: 1px solid black; margin-left: 8px; font-size: 14px; font-weight: 600;">เข้าสู่ระบบ</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Forgot password Modal -->
+    <div class="modal fade" id="ForgotModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <!-- Modal header -->
+                <div class="modal-header" style="border-bottom: none; padding: 16px 60px; margin-top: 15px;">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+                        style="opacity: 1;"></button>
+                </div>
+
+                <!-- Modal body -->
+                <!-- ถ้าจะใช้ยืนยันน่าจะต้องครอบ tag form ไม่แน่ใจ -->
+                <div class="modal-body align-items-center" style="padding: 48px 60px; padding-bottom: 16px;">
+                    <h3 class="fw-bold" style="font-size: 20px; text-align: center;">ลืมรหัสผ่าน ?</h3>
+                    <h5 class="fw-bold fs-md" style="text-align: center;">กรุณากรอกอีเมลที่ท่านเคยลงทะเบียนไว้</h5>
+
+                    <!-- email -->
+                    <label for="email" style="margin-bottom: 6px; font-size: 0.875rem; display: block;">อีเมล</label>
+                    <div class="login-text-container">
+                        <i class="bi bi-at fs-lg" style="position: absolute; left: 1rem; margin-top: 5px;"></i>
+                        <input class="rounded-corner login-text" type="email" placeholder="อีเมล">
+                    </div>
+
+                    <button type="submit" class="rounded-corner login">ลืมรหัสผ่าน</button>
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer"
+                    style="border-top: none; background-color: rgb(243, 245, 249); justify-content: center;">
+                    <div class="d-flex align-items-center justify-content-center">
+                        <span style="font-size: 14px; color: rgb(125, 135, 156);">ไม่ใช่สมาชิก?</span>
+                        <a data-bs-toggle="modal" data-bs-target="#RegisterModal"
+                            style="border-bottom: 1px solid black; margin-left: 8px; font-size: 14px; font-weight: 600;">สมัครสมาชิก</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -882,7 +1084,7 @@
             <i class="bi bi-basket2" style="font-size: 20px;"></i><br>
             ตะกร้า
         </a>
-        <a href="#" class="col" style="color: black;">
+        <a data-bs-toggle="modal" data-bs-target="#LoginModal" class="col" style="color: black;">
             <i class="bi bi-person" style="font-size: 20px;"></i><br>
             บัญชี
         </a>
